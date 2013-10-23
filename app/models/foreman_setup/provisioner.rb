@@ -1,0 +1,58 @@
+require 'ipaddr'
+
+module ForemanSetup
+  class Provisioner < ActiveRecord::Base
+    include ::Authorization
+    include ::Host::Hostmix
+
+    belongs_to_host
+    belongs_to :smart_proxy
+    belongs_to :subnet
+    has_one :domain, :through => :host
+    has_one :operatingsystem, :through => :host
+
+    # TODO: further validation on the subnet's (usually optional) attributes
+    accepts_nested_attributes_for :subnet
+
+    validates :host_id, :presence => true
+    validates :smart_proxy_id, :presence => true
+
+    def to_s
+      host.try(:to_s)
+    end
+
+    def fqdn
+      Facter.fqdn
+    end
+
+    def interfaces
+      facts = host.facts_hash
+      (facts['interfaces'] || '').split(',').reject { |i| i == 'lo' }.inject({}) do |ifaces,i|
+        ip = facts["ipaddress_#{i}"]
+        network = facts["network_#{i}"]
+        netmask = facts["netmask_#{i}"]
+        if ip && network && netmask
+          cidr = "#{network}/#{IPAddr.new(netmask).to_i.to_s(2).count("1")}"
+          ifaces[i] = {:ip => ip, :mask => netmask, :network => network, :cidr => cidr}
+        end
+        ifaces
+      end
+    end
+
+    def provision_interface_data
+      interfaces[provision_interface]
+    end
+
+    def rdns_zone
+      netmask_octets = subnet.mask.split('.').reverse
+      subnet.network.split('.').reverse.drop_while { |i| netmask_octets.shift == '0' }.join('.') + '.in-addr.arpa'
+    end
+
+    def dns_forwarders
+      File.open('/etc/resolv.conf', 'r').each_line.map do |r|
+        $1 if r =~ /^nameserver\s+(\S+)/
+      end.compact
+    end
+
+  end
+end

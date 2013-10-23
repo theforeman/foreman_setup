@@ -1,0 +1,45 @@
+
+<%= form_for provisioner do |f| %>
+  <%= base_errors_for provisioner %>
+  <%= wizard_header 1, _("Pre-requisites"), _("Network config"), _("Foreman installer"), _("Installation media"), _("Completion") %>
+
+  <div>
+    <%= _("This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified.") %>
+  </div>
+
+  <h4><%= _("Pre-requisites") %></h4>
+  <div>
+    <%= f.hidden_field :host_id %>
+    <% if f.object.host.present? %>
+      <%= checked_icon f.object.host.present? %> <%= _("Found registered host %s") % f.object.host.name %>
+    <% else %>
+      <%= image_tag 'false.png' %> <%= _("Missing registered host %s, please ensure it is checking in") % f.object.fqdn %>
+    <% end %>
+  </div>
+  <div>
+    <%= f.hidden_field :smart_proxy_id %>
+    <% if f.object.smart_proxy.present? %>
+      <%= checked_icon f.object.smart_proxy.present? %> <%= _("Found registered smart proxy %s") % f.object.smart_proxy.name %>
+    <% else %>
+      <%= image_tag 'false.png' %> <%= _("Missing registered smart proxy %s, please ensure it is registered") % f.object.fqdn %>
+    <% end %>
+  </div>
+  <div>
+    <% if f.object.host.present? && f.object.interfaces.any? %>
+      <%= checked_icon f.object.host.present? %> <%= _("Host %s has at least one network interface") % f.object.host.name %>
+    <% else %>
+      <%= image_tag 'false.png' %> <%= _("No network interfaces listed in $interfaces fact on %s") % f.object.host.name %>
+    <% end %>
+  </div>
+
+  <h4><%= _("Network selection") %></h4>
+  <div>
+    <% if f.object.host.present? && f.object.interfaces.any? %>
+      <%= selectable_f f, :provision_interface, f.object.interfaces.map { |i| ["#{i[1][:cidr]} (#{i[0]})", i[0]] }, {}, :label => _("Provisioning network") %>
+    <% else %>
+      <%= _("Not available until pre-requisites satisified.") %>
+    <% end %>
+  </div>
+
+  <%= submit_or_cancel f, false, {:cancel_path => foreman_setup_provisioners_path, :disabled => !(f.object.host.present? && f.object.smart_proxy.present?)} %>
+<% end %>

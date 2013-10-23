@@ -1,0 +1,53 @@
+
+<div class="well">
+  <%= wizard_header 3, _("Pre-requisites"), _("Network config"), _("Foreman installer"), _("Installation media"), _("Completion") %>
+
+  <div>
+    <%= _("All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning.") %>
+  </div>
+
+  <h4><%= _("Install provisioning with DHCP") %></h4>
+  <div>
+    <pre>
+foreman-installer \
+  --enable-foreman-proxy \
+  --foreman-proxy-tftp=true \
+  --foreman-proxy-dhcp=true \
+  --foreman-proxy-dhcp-gateway=<%= provisioner.subnet.gateway %> \
+  --foreman-proxy-dhcp-range="<%= provisioner.subnet.from %> <%= provisioner.subnet.to %>" \
+  --foreman-proxy-dhcp-nameservers="<%= provisioner.subnet.dns_primary %><%= ("," + provisioner.subnet.dns_secondary) unless provisioner.subnet.dns_secondary.blank? %>" \
+  --foreman-proxy-dns=true \
+  --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
+  --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
+<%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
+  --foreman-proxy-foreman-base-url=<%= root_url(:only_path => false) %> \
+  --foreman-proxy-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
+  --foreman-proxy-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
+</pre>
+  </div>
+
+  <h4><%= _("Install provisioning without DHCP") %></h4>
+  <div>
+    <pre>
+foreman-installer \
+  --enable-foreman-proxy \
+  --foreman-proxy-tftp=true \
+  --foreman-proxy-dns=true \
+  --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
+  --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
+<%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
+  --foreman-proxy-foreman-base-url=<%= root_url(:only_path => false) %> \
+  --foreman-proxy-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
+  --foreman-proxy-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
+</pre>
+  </div>
+
+  <%=
+  content_tag(:div, :class => "form-actions") do
+    content_tag(:div) do
+      link_to(_("Next"), step3_foreman_setup_provisioner_path, :class => "btn btn-primary")
+    end
+  end
+  %>
+
+</div>
