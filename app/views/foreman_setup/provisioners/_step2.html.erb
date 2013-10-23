@@ -1,7 +1,7 @@
 
 <%= form_for provisioner, :url => step2_update_foreman_setup_provisioner_path do |f| %>
   <%= base_errors_for provisioner %>
-  <%= wizard_header 2, _("Pre-requisites"), _("Network config"), _("Foreman installer"), _("Installation media"), _("Completion") %>
+  <%= provisioner_wizard 2 %>
 
   <div>
     <%= _("To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server.") %>

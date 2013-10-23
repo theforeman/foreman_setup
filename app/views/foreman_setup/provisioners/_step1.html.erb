@@ -1,7 +1,7 @@
 
 <%= form_for provisioner do |f| %>
   <%= base_errors_for provisioner %>
-  <%= wizard_header 1, _("Pre-requisites"), _("Network config"), _("Foreman installer"), _("Installation media"), _("Completion") %>
+  <%= provisioner_wizard 1 %>
 
   <div>
     <%= _("This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified.") %>
