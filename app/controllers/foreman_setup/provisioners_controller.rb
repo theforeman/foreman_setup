@@ -59,11 +59,12 @@ module ForemanSetup
         @provisioner.subnet.dns_id ||= proxy.id
       end
       if proxy.features.include? Feature.find_by_name('DHCP')
-        @provisioner.subnet.dns_id ||= proxy.id
+        @provisioner.subnet.dhcp_id ||= proxy.id
       end
       if proxy.features.include? Feature.find_by_name('TFTP')
         @provisioner.subnet.tftp_id ||= proxy.id
       end
+      @provisioner.save!
 
       # Helpful fix to work around #3210
       url = Setting.find_by_name('foreman_url')
