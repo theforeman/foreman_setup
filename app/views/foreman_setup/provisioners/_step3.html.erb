@@ -2,9 +2,9 @@
 <div class="well">
   <%= provisioner_wizard 3 %>
 
-  <div>
+  <p>
     <%= _("All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning.") %>
-  </div>
+  </p>
 
   <h4><%= _("Install provisioning with DHCP") %></h4>
   <div>
@@ -45,7 +45,7 @@ foreman-installer \
   <%=
   content_tag(:div, :class => "form-actions") do
     content_tag(:div) do
-      link_to(_("Next"), step3_foreman_setup_provisioner_path, :class => "btn btn-primary")
+      link_to(_("Next"), step4_foreman_setup_provisioner_path, :class => "btn btn-primary", :method => :post)
     end
   end
   %>

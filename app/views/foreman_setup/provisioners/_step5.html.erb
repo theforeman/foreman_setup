@@ -1,0 +1,17 @@
+
+<div class="well">
+  <%= provisioner_wizard 5 %>
+
+  <p>
+    <%= _("Provisioning setup is now fully complete.") %>
+  </p>
+
+  <%=
+  content_tag(:div, :class => "form-actions") do
+    content_tag(:div) do
+      link_to(_("Back to dashboard"), dashboard_path, :class => "btn btn-primary", :method => :get)
+    end
+  end
+  %>
+
+</div>

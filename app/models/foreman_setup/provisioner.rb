@@ -17,6 +17,8 @@ module ForemanSetup
     validates :host_id, :presence => true
     validates :smart_proxy_id, :presence => true
 
+    attr_accessor :medium
+
     def to_s
       host.try(:to_s)
     end
