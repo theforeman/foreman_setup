@@ -11,7 +11,7 @@
     <%= _("If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media.") %>
   </p>
 
-  <h6><%= _("Operating system to configure") %></h6>
+  <h4><%= _("Operating system") %></h4>
   <p><%= _("The following operating system will be configured for provisioning.") %></p>
   <%= (icon(f.object.host.os, :size => "18x18") + " #{f.object.host.os}").html_safe %>
 
@@ -33,7 +33,7 @@
     <%= field(f, :spacewalk_hostname, :label => _("Hostname")) { text_field_tag :spacewalk_hostname } %>
   <% end %>
 
-  <h6><%= _("Activation key configuration") %></h6>
+  <h4><%= _("Activation key configuration") %></h4>
   <p><%= _("Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank.") %></p>
   <%= f.fields_for :satellite_type, @satellite_type do |stf| %>
     <%= selectable_f stf, :value, [['Red Hat Satellite or Spacewalk', 'site'], ['Red Hat Network', 'hosted']], {:include_blank => true}, {:label => _("Type")} %>
