@@ -115,8 +115,10 @@ module ForemanSetup
       if @provisioner.host.os.family == 'Redhat'
         tmpl_name = 'Kickstart'
         provision_tmpl_name = @provisioner.host.os.name == 'Redhat' ? 'RHEL Kickstart' : tmpl_name
+        ptable_name = 'RedHat default'
       elsif @provisioner.host.os.family == 'Debian'
         tmpl_name = provision_tmpl_name = 'Preseed'
+        ptable_name = 'Ubuntu default'
       end
 
       {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name}.each do |kind_name, tmpl_name|
@@ -129,7 +131,13 @@ module ForemanSetup
           @provisioner.host.os.os_default_templates.build(:template_kind_id => kind.id, :config_template_id => tmpl.id)
         end
       end
+
+      @provisioner.host.os.architectures << @provisioner.host.architecture unless @provisioner.host.os.architectures.include? @provisioner.host.architecture
       @provisioner.host.os.save!
+
+      ptable = Ptable.where('name LIKE ?', "#{ptable_name}%").first || raise("cannot find ptable for #{@provisioner.host.os}")
+      ptable.operatingsystems << @provisioner.host.os unless ptable.operatingsystems.include? @provisioner.host.os
+      ptable.save!
 
       process_success :success_msg => _("Successfully associated OS %s.") % @provisioner.host.os.to_s, :success_redirect => step5_foreman_setup_provisioner_path
     end
