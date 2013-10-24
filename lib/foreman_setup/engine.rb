@@ -1,4 +1,5 @@
 require 'foreman_setup'
+require 'deface'
 
 module ForemanSetup
   class Engine < ::Rails::Engine

@@ -22,4 +22,6 @@ Gem::Specification.new do |s|
     "README.md",
   ]
   s.files = `git ls-files`.split("\n") - Dir[".*", "Gem*", "*.gemspec"]
+
+  s.add_dependency "deface", "< 1.0"
 end
