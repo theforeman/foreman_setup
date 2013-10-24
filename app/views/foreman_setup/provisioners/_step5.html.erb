@@ -18,12 +18,4 @@
   <%= option_button _("Compute Resources"), compute_resources_path, :class => 'btn', :help_inline => _("Add and manage compute resources (virtualization and cloud)") %>
   <%= option_button _("Provisioning Setup"), foreman_setup_provisioners_path, :class => 'btn', :help_inline => _("Return to the main provisioning setup page") %>
 
-  <%=
-  content_tag(:div, :class => "form-actions") do
-    content_tag(:div) do
-      link_to(_("Back to dashboard"), dashboard_path, :class => "btn btn-primary", :method => :get)
-    end
-  end
-  %>
-
 </div>
