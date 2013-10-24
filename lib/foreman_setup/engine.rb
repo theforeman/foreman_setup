@@ -14,7 +14,7 @@ module ForemanSetup
 
     config.to_prepare do
       begin
-        # todo
+        ::HomeHelper.send :include, ForemanSetup::HomeHelperExt
       rescue => e
         puts "#{ForemanSetup::ENGINE_NAME}: skipping engine hook (#{e.to_s})"
       end

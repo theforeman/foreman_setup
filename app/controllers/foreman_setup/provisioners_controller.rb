@@ -8,6 +8,17 @@ module ForemanSetup
     before_filter :find_resource, :except => [:index, :new, :create]
 
     def index
+      @provisioners = Provisioner.all.paginate :page => params[:page]
+      redirect_to new_foreman_setup_provisioner_path unless @provisioners.any?
+    end
+
+    def destroy
+      @provisioner = Provisioner.find(params[:id])
+      if @provisioner.destroy
+        process_success :success_redirect => foreman_setup_provisioners_path
+      else
+        process_error
+      end
     end
 
     def new

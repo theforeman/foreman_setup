@@ -1,0 +1,23 @@
+<% title _("Provisioning setup") %>
+
+<% title_actions display_link_if_authorized(_("Set up provisioning"), hash_for_new_foreman_setup_provisioner_path), help_path %>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th><%= sort :name, :as => _("Provisioning host") %></th>
+    <th><%=  _("Smart proxy") %></th>
+    <th><%=  _("Subnet") %></th>
+    <th></th>
+  </tr>
+  <% for prov in @provisioners %>
+    <tr>
+      <td><%= link_to_if_authorized h(prov.host.to_s), hash_for_edit_foreman_setup_provisioner_path(prov)%></td>
+      <td><%= prov.smart_proxy.try(:name) %></td>
+      <td><%= "#{prov.subnet.name} (#{prov.subnet.to_label})" if prov.subnet.present? %></td>
+      <td><%= display_delete_if_authorized hash_for_foreman_setup_provisioner_path(prov), :confirm => _("Delete %s?") % prov.host.to_s %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= page_entries_info @provisioners %>
+<%= will_paginate     @provisioners %>
