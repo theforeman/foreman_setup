@@ -46,6 +46,7 @@ module ForemanSetup
     end
 
     def step2_update
+      @provisioner.subnet ||= Subnet.find_by_id(params['foreman_setup_provisioner']['subnet_attributes']['id'])
       if @provisioner.update_attributes(params['foreman_setup_provisioner'])
         process_success :success_msg => _("Successfully updated subnet %s.") % @provisioner.subnet.name, :success_redirect => step3_foreman_setup_provisioner_path
       else
