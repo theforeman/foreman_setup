@@ -12,11 +12,14 @@
 foreman-installer \
   --enable-foreman-proxy \
   --foreman-proxy-tftp=true \
+  --foreman-proxy-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
   --foreman-proxy-dhcp=true \
+  --foreman-proxy-dhcp-interface=<%= provisioner.provision_interface %> \
   --foreman-proxy-dhcp-gateway=<%= provisioner.subnet.gateway %> \
   --foreman-proxy-dhcp-range="<%= provisioner.subnet.from %> <%= provisioner.subnet.to %>" \
   --foreman-proxy-dhcp-nameservers="<%= provisioner.subnet.dns_primary %><%= ("," + provisioner.subnet.dns_secondary) unless provisioner.subnet.dns_secondary.blank? %>" \
   --foreman-proxy-dns=true \
+  --foreman-proxy-dns-interface=<%= provisioner.provision_interface %> \
   --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
   --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
 <%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
@@ -32,7 +35,9 @@ foreman-installer \
 foreman-installer \
   --enable-foreman-proxy \
   --foreman-proxy-tftp=true \
+  --foreman-proxy-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
   --foreman-proxy-dns=true \
+  --foreman-proxy-dns-interface=<%= provisioner.provision_interface %> \
   --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
   --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
 <%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
