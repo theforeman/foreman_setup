@@ -5,16 +5,21 @@ module ForemanSetup
     include ::Authorization
     include ::Host::Hostmix
 
+    before_save :populate_hostgroup
+
     belongs_to_host
+    belongs_to :hostgroup, :autosave => true
     belongs_to :smart_proxy
     belongs_to :subnet
+    has_one :architecture, :through => :host
     has_one :domain, :through => :host
     has_one :operatingsystem, :through => :host
 
+    accepts_nested_attributes_for :hostgroup
     # TODO: further validation on the subnet's (usually optional) attributes
     accepts_nested_attributes_for :subnet
 
-    validates :host_id, :presence => true
+    validates :host_id, :presence => true, :uniqueness => true
     validates :smart_proxy_id, :presence => true
 
     attr_accessor :medium
@@ -54,6 +59,19 @@ module ForemanSetup
       File.open('/etc/resolv.conf', 'r').each_line.map do |r|
         $1 if r =~ /^nameserver\s+(\S+)/
       end.compact
+    end
+
+    private
+
+    # Ensures our nested hostgroup has as much data as possible
+    def populate_hostgroup
+      return unless hostgroup.present?
+      hostgroup.architecture_id ||= domain.id
+      hostgroup.domain_id ||= domain.id
+      hostgroup.operatingsystem_id ||= operatingsystem.id
+      hostgroup.puppet_ca_proxy_id = smart_proxy.id if smart_proxy.features.include? Feature.find_by_name('Puppet CA')
+      hostgroup.puppet_proxy_id = smart_proxy.id if smart_proxy.features.include? Feature.find_by_name('Puppet')
+      hostgroup.subnet_id ||= subnet.id
     end
 
   end
