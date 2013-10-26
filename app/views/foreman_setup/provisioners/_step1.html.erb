@@ -28,7 +28,7 @@
     <% if f.object.host.present? && f.object.interfaces.any? %>
       <%= checked_icon f.object.host.present? %> <%= _("Host %s has at least one network interface") % f.object.host.name %>
     <% else %>
-      <%= image_tag 'false.png' %> <%= _("No network interfaces listed in $interfaces fact on %s") % f.object.host.name %>
+      <%= image_tag 'false.png' %> <%= _("No network interfaces listed in $interfaces fact") %>
     <% end %>
   </div>
 
