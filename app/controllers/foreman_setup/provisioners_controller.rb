@@ -46,7 +46,7 @@ module ForemanSetup
     end
 
     def step2_update
-      @provisioner.hostgroup ||= Hostgroup.new(:name => _("Provision from %s") % @provisioner.fqdn)
+      @provisioner.hostgroup ||= Hostgroup.find_or_create_by_name(_("Provision from %s") % @provisioner.fqdn)
       @provisioner.subnet ||= Subnet.find_by_id(params['foreman_setup_provisioner']['subnet_attributes']['id'])
       if @provisioner.update_attributes(params['foreman_setup_provisioner'])
         @provisioner.subnet.domains << @provisioner.domain unless @provisioner.subnet.domains.include? @provisioner.domain
