@@ -13,6 +13,7 @@ module ForemanSetup
     belongs_to :subnet
     has_one :architecture, :through => :host
     has_one :domain, :through => :host
+    has_one :medium, :through => :hostgroup
     has_one :operatingsystem, :through => :host
 
     accepts_nested_attributes_for :hostgroup
@@ -21,8 +22,6 @@ module ForemanSetup
 
     validates :host_id, :presence => true, :uniqueness => true
     validates :smart_proxy_id, :presence => true
-
-    attr_accessor :medium
 
     def to_s
       host.try(:to_s)

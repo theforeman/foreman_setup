@@ -16,7 +16,9 @@
   <%= (icon(f.object.host.os, :size => "18x18") + " #{f.object.host.os}").html_safe %>
 
   <h6><%= _("Use an existing installation medium") %></h6>
-  <%= select_f f, :medium, Medium.all, :id, :name, {:include_blank => true}, {:label => _("Existing medium")} %>
+  <%= f.fields_for :hostgroup do |hgf| %>
+    <%= select_f hgf, :medium_id, Medium.all, :id, :name, {:include_blank => true}, {:label => _("Existing medium")} %>
+  <% end %>
 
   <h6><%= _("Create new installation medium") %></h6>
   <%= f.fields_for :create_medium, @medium do |mf| %>

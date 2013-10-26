@@ -97,8 +97,9 @@ module ForemanSetup
     end
 
     def step4_update
-      if params['foreman_setup_provisioner']['medium'].to_i > 0
-        @medium = Medium.find(params['foreman_setup_provisioner']['medium']) || raise('unable to find medium')
+      medium_id = params['foreman_setup_provisioner']['hostgroup_attributes']['medium_id']
+      if medium_id.to_i > 0
+        @medium = Medium.find(medium_id) || raise('unable to find medium')
       else
         @medium = Medium.new(params['foreman_setup_provisioner']['create_medium'].slice(:name, :path))
       end
@@ -153,7 +154,7 @@ module ForemanSetup
       ptable.operatingsystems << @provisioner.host.os unless ptable.operatingsystems.include? @provisioner.host.os
       ptable.save!
 
-      @provisioner.hostgroup.medium_id ||= @medium.id
+      @provisioner.hostgroup.medium_id = @medium.id
       @provisioner.hostgroup.ptable_id ||= ptable.id
       @provisioner.hostgroup.save!
 
