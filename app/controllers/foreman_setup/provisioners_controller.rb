@@ -48,8 +48,8 @@ module ForemanSetup
     def step2_update
       @provisioner.hostgroup ||= Hostgroup.new(:name => _("Provision from %s") % @provisioner.fqdn)
       @provisioner.subnet ||= Subnet.find_by_id(params['foreman_setup_provisioner']['subnet_attributes']['id'])
-      @provisioner.subnet.domains << @provisioner.domain unless @provisioner.subnet.domains.include? @provisioner.domain
       if @provisioner.update_attributes(params['foreman_setup_provisioner'])
+        @provisioner.subnet.domains << @provisioner.domain unless @provisioner.subnet.domains.include? @provisioner.domain
         process_success :success_msg => _("Successfully updated subnet %s.") % @provisioner.subnet.name, :success_redirect => step3_foreman_setup_provisioner_path
       else
         process_error :render => 'foreman_setup/provisioners/step2', :object => @provisioner, :redirect => step2_foreman_setup_provisioner_path
