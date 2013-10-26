@@ -89,7 +89,7 @@ module ForemanSetup
       status, msg = ConfigTemplate.build_pxe_default(self)
       warning msg unless status == 200
 
-      @provisioner.medium = @provisioner.host.os.media.first
+      @provisioner.hostgroup.medium ||= @provisioner.host.os.media.first
       @medium = Medium.new(params['foreman_setup_provisioner'].try(:[], 'medium_attributes'))
 
       @activation_key = CommonParameter.find_by_name('activation_key') || CommonParameter.new(:name => 'activation_key')
