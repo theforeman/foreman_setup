@@ -92,8 +92,9 @@ module ForemanSetup
       @provisioner.hostgroup.medium ||= @provisioner.host.os.media.first
       @medium = Medium.new(params['foreman_setup_provisioner'].try(:[], 'medium_attributes'))
 
-      @activation_key = CommonParameter.find_by_name('activation_key') || CommonParameter.new(:name => 'activation_key')
-      @satellite_type = CommonParameter.find_by_name('satellite_type') || CommonParameter.new(:name => 'satellite_type')
+      parameters = @provisioner.hostgroup.group_parameters
+      @activation_key = parameters.where(:name => 'activation_key').first || parameters.new(:name => 'activation_key')
+      @satellite_type = parameters.where(:name => 'satellite_type').first || parameters.new(:name => 'satellite_type')
     end
 
     def step4_update
@@ -115,11 +116,20 @@ module ForemanSetup
       end
       @medium.path = "http://#{spacewalk_hostname}/ks/dist/ks-rhel-$arch-server-$major-$version" unless spacewalk_hostname.blank?
 
-      @activation_key = CommonParameter.find_by_name('activation_key')
-      @activation_key ||= CommonParameter.new(params['foreman_setup_provisioner']['activation_key'].merge(:name => 'activation_key'))
+      parameters = @provisioner.hostgroup.group_parameters
+      @activation_key = parameters.where(:name => 'activation_key').first
+      if @activation_key
+        @activation_key.assign_attributes(params['foreman_setup_provisioner']['activation_key'])
+      else
+        @activation_key = parameters.new(params['foreman_setup_provisioner']['activation_key'].merge(:name => 'activation_key'))
+      end
 
-      @satellite_type = CommonParameter.find_by_name('satellite_type')
-      @satellite_type ||= CommonParameter.new(params['foreman_setup_provisioner']['satellite_type'].merge(:name => 'satellite_type'))
+      @satellite_type = parameters.where(:name => 'satellite_type').first
+      if @satellite_type
+        @satellite_type.assign_attributes(params['foreman_setup_provisioner']['satellite_type'])
+      else
+        @satellite_type = parameters.new(params['foreman_setup_provisioner']['satellite_type'].merge(:name => 'satellite_type'))
+      end
 
       # Associate medium with the host OS
       @medium.os_family ||= @provisioner.host.os.type
