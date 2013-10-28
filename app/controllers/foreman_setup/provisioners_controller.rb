@@ -143,15 +143,22 @@ module ForemanSetup
       if @provisioner.host.os.family == 'Redhat'
         tmpl_name = 'Kickstart'
         provision_tmpl_name = @provisioner.host.os.name == 'Redhat' ? 'RHEL Kickstart' : tmpl_name
+        gpxe_tmpl_name = 'Kickstart'
         ptable_name = 'RedHat default'
       elsif @provisioner.host.os.family == 'Debian'
         tmpl_name = provision_tmpl_name = 'Preseed'
         ptable_name = 'Ubuntu default'
       end
 
-      {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name}.each do |kind_name, tmpl_name|
+      {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name, 'gPXE' => gpxe_tmpl_name}.each do |kind_name, tmpl_name|
+        next if tmpl_name.blank?
         kind = TemplateKind.find_by_name(kind_name)
-        tmpl = ConfigTemplate.where('name LIKE ?', "#{tmpl_name}%").where(:template_kind_id => kind.id).first || raise("cannot find template for #{@provisioner.host.os}")
+        tmpls = ConfigTemplate.where('name LIKE ?', "#{tmpl_name}%").where(:template_kind_id => kind.id)
+        tmpls.any? || raise("cannot find template for #{@provisioner.host.os}")
+
+        # prefer foreman_bootdisk templates
+        tmpl = tmpls.where('name LIKE "boot disk"').first || tmpls.first
+
         tmpl.operatingsystems << @provisioner.host.os unless tmpl.operatingsystems.include? @provisioner.host.os
         tmpl.save!
 
