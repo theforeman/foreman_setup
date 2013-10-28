@@ -120,14 +120,14 @@ module ForemanSetup
       @activation_key = parameters.where(:name => 'activation_key').first
       if @activation_key
         @activation_key.assign_attributes(params['foreman_setup_provisioner']['activation_key'])
-      else
+      elsif params['foreman_setup_provisioner']['activation_key']['value'].present?
         @activation_key = parameters.new(params['foreman_setup_provisioner']['activation_key'].merge(:name => 'activation_key'))
       end
 
       @satellite_type = parameters.where(:name => 'satellite_type').first
       if @satellite_type
         @satellite_type.assign_attributes(params['foreman_setup_provisioner']['satellite_type'])
-      else
+      elsif params['foreman_setup_provisioner']['satellite_type']['value'].present?
         @satellite_type = parameters.new(params['foreman_setup_provisioner']['satellite_type'].merge(:name => 'satellite_type'))
       end
 
@@ -137,14 +137,6 @@ module ForemanSetup
       unless @medium.save
         process_error :render => 'foreman_setup/provisioners/step4', :object => @provisioner, :redirect => step4_foreman_setup_provisioner_path
         return
-      end
-
-      # Only store parameters unless they're new and blank
-      unless @activation_key.new_record? && @activation_key.value.blank?
-        @activation_key.save!
-      end
-      unless @satellite_type.new_record? && @satellite_type.value.blank?
-        @satellite_type.save!
       end
 
       # Associate templates with OS and vice-versa
