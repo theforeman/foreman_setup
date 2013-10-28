@@ -1,3 +1,4 @@
+<%= javascript 'foreman_setup/provisioner' %>
 
 <%= form_for provisioner, :url => step4_update_foreman_setup_provisioner_path do |f| %>
   <%= base_errors_for provisioner %>
@@ -12,7 +13,7 @@
   </p>
 
   <h4><%= _("Operating system") %></h4>
-  <p><%= _("The following operating system will be configured for provisioning.") %></p>
+  <p><%= _("The following operating system will be configured for provisioning:") %></p>
   <%= (icon(f.object.host.os, :size => "18x18") + " #{f.object.host.os}").html_safe %>
 
   <h6><%= _("Use an existing installation medium") %></h6>
@@ -22,17 +23,17 @@
 
   <h6><%= _("Create new installation medium") %></h6>
   <%= f.fields_for :create_medium, @medium do |mf| %>
-    <%= text_f mf, :name %>
+    <%= text_f mf, :name, :onchange => 'setup_media_create_change(this)' %>
 
     <%= label_tag('', :class => 'radio inline') do %>
-      <% radio_button_tag(:medium_type, :path, true) + _("Normal installation media") %>
+      <% radio_button_tag(:medium_type, :path, true, :onchange => 'setup_media_change(this); setup_media_create_change(this)') + _("Normal installation media") %>
     <% end %>
     <%= text_f mf, :path, :label => _("Path or URL") %>
 
     <%= label_tag('', :class => 'radio inline') do %>
-      <% radio_button_tag(:medium_type, :path, true) + _("Red Hat Satellite 5 or Spacewalk") %>
+      <% radio_button_tag(:medium_type, :spacewalk, false, :onchange => 'setup_media_change(this); setup_media_create_change(this)') + _("Red Hat Satellite 5 or Spacewalk") %>
     <% end %>
-    <%= field(f, :spacewalk_hostname, :label => _("Hostname")) { text_field_tag :spacewalk_hostname } %>
+    <%= field(f, :spacewalk_hostname, :label => _("Hostname")) { text_field_tag :spacewalk_hostname, nil, :disabled => true } %>
   <% end %>
 
   <h4><%= _("Activation key configuration") %></h4>

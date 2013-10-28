@@ -97,12 +97,23 @@ module ForemanSetup
     end
 
     def step4_update
+      if params['medium_type'] == 'spacewalk'
+        spacewalk_hostname = params['spacewalk_hostname']
+        if spacewalk_hostname.blank?
+          @provisioner.errors.add(:base, _("Spacewalk hostname is missing"))
+          process_error :render => 'foreman_setup/provisioners/step4', :object => @provisioner, :redirect => step4_foreman_setup_provisioner_path
+          return
+        end
+      end
+
       medium_id = params['foreman_setup_provisioner']['hostgroup_attributes']['medium_id']
       if medium_id.to_i > 0
         @medium = Medium.find(medium_id) || raise('unable to find medium')
       else
+        @provisioner.hostgroup.medium_id = nil
         @medium = Medium.new(params['foreman_setup_provisioner']['create_medium'].slice(:name, :path))
       end
+      @medium.path = "http://#{spacewalk_hostname}/ks/dist/ks-rhel-$arch-server-$major-$version" unless spacewalk_hostname.blank?
 
       @activation_key = CommonParameter.find_by_name('activation_key')
       @activation_key ||= CommonParameter.new(params['foreman_setup_provisioner']['activation_key'].merge(:name => 'activation_key'))
