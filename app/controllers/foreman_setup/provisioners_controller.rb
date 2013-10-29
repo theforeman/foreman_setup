@@ -164,7 +164,7 @@ module ForemanSetup
         tmpls.any? || raise("cannot find template for #{@provisioner.host.os}")
 
         # prefer foreman_bootdisk templates
-        tmpl = tmpls.where('name LIKE "boot disk"').first || tmpls.first
+        tmpl = tmpls.where("name LIKE '%sboot disk%s'").first || tmpls.first
 
         tmpl.operatingsystems << @provisioner.host.os unless tmpl.operatingsystems.include? @provisioner.host.os
         tmpl.save!
