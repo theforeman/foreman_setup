@@ -65,7 +65,7 @@ module ForemanSetup
     # Ensures our nested hostgroup has as much data as possible
     def populate_hostgroup
       return unless hostgroup.present?
-      hostgroup.architecture_id ||= domain.id
+      hostgroup.architecture_id ||= architecture.id
       hostgroup.domain_id ||= domain.id
       hostgroup.operatingsystem_id ||= operatingsystem.id
       hostgroup.puppet_ca_proxy_id = smart_proxy.id if smart_proxy.features.include? Feature.find_by_name('Puppet CA')
