@@ -7,6 +7,9 @@
     <%= _("To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server.") %>
   </p>
 
+  <h4><%= _("Domain") %></h4>
+  <%= text_f f, :domain_name, :label => s_("Domain|Name"), :help_inline => _("The DNS domain name to provision hosts into") %>
+
   <h4><%= _("Subnet") %></h4>
   <%= f.fields_for :subnet, f.object.subnet do |sf| %>
     <%= render 'subnets/fields', :f => sf %>

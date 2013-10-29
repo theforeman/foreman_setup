@@ -8,11 +8,11 @@ module ForemanSetup
     before_save :populate_hostgroup
 
     belongs_to_host
+    belongs_to :domain
     belongs_to :hostgroup, :autosave => true
     belongs_to :smart_proxy
     belongs_to :subnet
     has_one :architecture, :through => :host
-    has_one :domain, :through => :host
     has_one :medium, :through => :hostgroup
     has_one :operatingsystem, :through => :host
 

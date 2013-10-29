@@ -36,18 +36,25 @@ module ForemanSetup
       end
     end
 
-    # Basic model created, now fill in nested subnet info using selected interface
+    # Basic model created, now fill in nested subnet/domain info using selected interface
     def step2
       network = @provisioner.provision_interface_data
       @provisioner.subnet ||= Subnet.find_by_network(network[:network])
       @provisioner.subnet ||= Subnet.new(network.slice(:network, :mask).merge(
         :dns_primary => @provisioner.provision_interface_data[:ip],
       ))
+
+      @provisioner.domain ||= @provisioner.host.domain
+      @provisioner.domain ||= Domain.new(:name => 'example.com')
     end
 
     def step2_update
       @provisioner.hostgroup ||= Hostgroup.find_or_create_by_name(_("Provision from %s") % @provisioner.fqdn)
       @provisioner.subnet ||= Subnet.find_by_id(params['foreman_setup_provisioner']['subnet_attributes']['id'])
+      domain_name = params['foreman_setup_provisioner'].delete('domain_name')
+      @provisioner.domain = Domain.find_by_name(domain_name)
+      @provisioner.domain ||= Domain.new(:name => domain_name)
+
       if @provisioner.update_attributes(params['foreman_setup_provisioner'])
         @provisioner.subnet.domains << @provisioner.domain unless @provisioner.subnet.domains.include? @provisioner.domain
         process_success :success_msg => _("Successfully updated subnet %s.") % @provisioner.subnet.name, :success_redirect => step3_foreman_setup_provisioner_path
