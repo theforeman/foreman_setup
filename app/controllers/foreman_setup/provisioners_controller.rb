@@ -41,7 +41,7 @@ module ForemanSetup
       network = @provisioner.provision_interface_data
       @provisioner.subnet ||= Subnet.find_by_network(network[:network])
       @provisioner.subnet ||= Subnet.new(network.slice(:network, :mask).merge(
-        :dns_primary => @provisioner.provision_interface_data[:ip],
+        :dns_primary => @provisioner.provision_interface_data[:ip]
       ))
 
       @provisioner.domain ||= @provisioner.host.domain
