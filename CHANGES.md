@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3
+* fix Foreman 1.4 compatibility
+* add basic role and permission under Foreman 1.4
+
 ## v1.0.2
 * fix Ruby 1.8 compatibility (Yamakasi)
 
