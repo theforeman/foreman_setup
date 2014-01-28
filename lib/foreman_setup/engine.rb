@@ -13,6 +13,20 @@ module ForemanSetup
       app.config.paths['db/migrate'] += ForemanSetup::Engine.paths['db/migrate'].existent
     end
 
+    initializer 'foreman_setup.register_plugin', :after=> :finisher_hook do |app|
+      Foreman::Plugin.register :foreman_setup do
+        menu :top_menu, :provisioners, :url_hash => {:controller=> :'foreman_setup/provisioners', :action=>:index},
+                 :caption=> N_('Provisioning setup'),
+                 :parent => :infrastructure_menu,
+                 :first => true
+
+        security_block :provisioning do
+          permission :edit_provisioning, {:'foreman_setup/provisioners' => [:index, :new, :update, :create, :step1, :step2, :step3, :step4, :step5] }
+        end
+        role "Provisioning setup", [:edit_provisioning]
+      end if defined? Foreman::Plugin
+    end
+
     config.to_prepare do
       begin
         ::HomeHelper.send :include, ForemanSetup::HomeHelperExt
