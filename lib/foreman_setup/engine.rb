@@ -21,7 +21,7 @@ module ForemanSetup
                  :first => true
 
         security_block :provisioning do
-          permission :edit_provisioning, {:'foreman_setup/provisioners' => [:index, :new, :update, :create, :step1, :step2, :step3, :step4, :step5] }
+          permission :edit_provisioning, {:'foreman_setup/provisioners' => [:index, :new, :update, :create, :show, :destroy, :step1, :step2, :step2_update, :step3, :step4, :step4_update, :step5] }
         end
         role "Provisioning setup", [:edit_provisioning]
       end if defined? Foreman::Plugin
