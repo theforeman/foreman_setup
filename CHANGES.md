@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.4
+* further Foreman 1.4 fixes, template renames and CSS
+
 ## v1.0.3
 * fix Foreman 1.4 compatibility
 * add basic role and permission under Foreman 1.4
