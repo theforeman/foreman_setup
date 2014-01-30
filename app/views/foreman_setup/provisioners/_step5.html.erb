@@ -15,8 +15,8 @@
   <h4><%= _("Next steps") %></h4>
 
   <%= option_button _("New Host"), new_host_path, :class => 'btn btn-success', :help_inline => _("Create and provision a new host") %>
-  <%= option_button _("Compute Resources"), compute_resources_path, :class => 'btn', :help_inline => _("Add and manage compute resources (virtualization and cloud)") %>
-  <%= option_button _("Edit Host Group"), edit_hostgroup_path(@provisioner.hostgroup), :class => 'btn', :help_inline => _("Review and edit the host group set up by the provisioning wizard") %>
-  <%= option_button _("Provisioning Setup"), foreman_setup_provisioners_path, :class => 'btn', :help_inline => _("Return to the main provisioning setup page") %>
+  <%= option_button _("Compute Resources"), compute_resources_path, :class => 'btn btn-default', :help_inline => _("Add and manage compute resources (virtualization and cloud)") %>
+  <%= option_button _("Edit Host Group"), edit_hostgroup_path(@provisioner.hostgroup), :class => 'btn btn-default', :help_inline => _("Review and edit the host group set up by the provisioning wizard") %>
+  <%= option_button _("Provisioning Setup"), foreman_setup_provisioners_path, :class => 'btn btn-default', :help_inline => _("Return to the main provisioning setup page") %>
 
 </div>
