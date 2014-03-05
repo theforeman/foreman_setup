@@ -2,7 +2,7 @@ require 'ipaddr'
 
 module ForemanSetup
   class Provisioner < ActiveRecord::Base
-    include ::Authorization
+    include ::Authorizable
     include ::Host::Hostmix
 
     before_save :populate_hostgroup
