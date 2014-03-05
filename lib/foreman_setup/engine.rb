@@ -27,7 +27,7 @@ module ForemanSetup
              :step2, :step2_update, :step3, :step4, :step4_update, :step5] }, :resource_type => "ForemanSetup::Provisioner"
         end
         role "Provisioning setup", [:edit_provisioning]
-      end if defined? Foreman::Plugin
+      end
     end
 
     config.to_prepare do
