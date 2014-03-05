@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.0
+* add support for Foreman 1.5 auth system (#4538)
+* this version (2.x) drops support for Foreman 1.4 and earlier
+* update menu references for Foreman 1.4 (Jean-Baptiste Rouault)
+
 ## v1.0.4
 * further Foreman 1.4 fixes, template renames and CSS
 
