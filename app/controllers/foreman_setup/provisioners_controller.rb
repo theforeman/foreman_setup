@@ -201,7 +201,7 @@ module ForemanSetup
     end
 
     def find_resource
-      @provisioner = Provisioner.find(params[:id]) or raise('unknown id')
+      @provisioner = Provisioner.authorized(:edit_provisioning).find(params[:id]) or raise('unknown id')
     end
 
   end
