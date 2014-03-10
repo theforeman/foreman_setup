@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.1
+* add support for precompiling JavaScript assets
+
 ## v2.0.0
 * add support for Foreman 1.5 auth system (#4538)
 * this version (2.x) drops support for Foreman 1.4 and earlier
