@@ -9,3 +9,5 @@ Gemfile.lock
 .rvmrc*
 .ruby-*
 pkg/
+public/
+tags

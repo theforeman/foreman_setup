@@ -30,6 +30,16 @@ module ForemanSetup
       end
     end
 
+    initializer 'foreman_setup.configure_assets', :group => :assets do
+      SETTINGS[:setup] = {
+        :assets => {
+          :precompile => [
+            'foreman_setup/provisioner.js'
+          ],
+        }
+      }
+    end
+
     config.to_prepare do
       begin
         ::HomeHelper.send :include, ForemanSetup::HomeHelperExt
