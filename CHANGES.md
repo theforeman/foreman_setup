@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.2
+* remove obsolete menu extension, causing warnings
+
 ## v2.0.1
 * add support for precompiling JavaScript assets
 
