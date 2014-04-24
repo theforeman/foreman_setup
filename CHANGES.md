@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.3
+* fix Facter 2 compatibility
+
 ## v2.0.2
 * remove obsolete menu extension, causing warnings
 
