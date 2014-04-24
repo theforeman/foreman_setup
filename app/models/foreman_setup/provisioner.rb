@@ -28,7 +28,7 @@ module ForemanSetup
     end
 
     def fqdn
-      Facter.fqdn
+      Facter.value(:fqdn)
     end
 
     def interfaces

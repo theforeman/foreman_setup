@@ -89,7 +89,7 @@ module ForemanSetup
 
       # Helpful fix to work around #3210
       url = Setting.find_by_name('foreman_url')
-      url.value ||= Facter.fqdn
+      url.value ||= Facter.value(:fqdn)
       url.save!
 
       # Build default PXE menu
@@ -195,7 +195,7 @@ module ForemanSetup
     # foreman_setup manages only itself at the moment, so ensure we always have a reference to
     # the Host and SmartProxy on this server
     def find_myself
-      fqdn = Facter.fqdn
+      fqdn = Facter.value(:fqdn)
       @host = Host.find_by_name(fqdn)
       @proxy = SmartProxy.all.find { |p| URI.parse(p.url).host == fqdn }
     end
