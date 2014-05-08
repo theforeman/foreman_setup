@@ -29,16 +29,6 @@ module ForemanSetup
         role "Provisioning setup", [:edit_provisioning]
       end
     end
-
-    initializer 'foreman_setup.configure_assets', :group => :assets do
-      SETTINGS[:setup] = {
-        :assets => {
-          :precompile => [
-            'foreman_setup/provisioner.js'
-          ],
-        }
-      }
-    end
   end
 
   def table_name_prefix

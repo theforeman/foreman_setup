@@ -1,4 +1,18 @@
-<%= javascript 'foreman_setup/provisioner' %>
+<%= javascript_tag do %>
+  function setup_media_change(ele) {
+    if ($(ele).val() == 'spacewalk') {
+      $('[id$="medium_path"]').prop('disabled', true)
+      $('#spacewalk_hostname').prop('disabled', false)
+    } else {
+      $('#spacewalk_hostname').prop('disabled', true)
+      $('[id$="medium_path"]').prop('disabled', false)
+    }
+  }
+
+  function setup_media_create_change(ele) {
+    $('[id$="medium_id"]').val('')
+  }
+<% end %>
 
 <%= form_for provisioner, :url => step4_update_foreman_setup_provisioner_path do |f| %>
   <%= base_errors_for provisioner %>
