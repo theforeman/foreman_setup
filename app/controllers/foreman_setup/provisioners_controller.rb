@@ -151,13 +151,15 @@ module ForemanSetup
         tmpl_name = 'Kickstart'
         provision_tmpl_name = @provisioner.host.os.name == 'Redhat' ? 'RHEL Kickstart' : tmpl_name
         ipxe_tmpl_name = 'Kickstart'
+        finish_tmpl_name = 'Kickstart default finish'
         ptable_name = 'Kickstart default'
       elsif @provisioner.host.os.family == 'Debian'
         tmpl_name = provision_tmpl_name = 'Preseed'
+        finish_tmpl_name = 'Preseed default finish'
         ptable_name = 'Preseed default'
       end
 
-      {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name, 'iPXE' => ipxe_tmpl_name}.each do |kind_name, tmpl_name|
+      {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name, 'iPXE' => ipxe_tmpl_name, 'finish' => finish_tmpl_name}.each do |kind_name, tmpl_name|
         next if tmpl_name.blank?
         kind = TemplateKind.find_by_name(kind_name)
         tmpls = ConfigTemplate.where('name LIKE ?', "#{tmpl_name}%").where(:template_kind_id => kind.id)
