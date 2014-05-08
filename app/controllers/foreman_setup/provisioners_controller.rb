@@ -147,19 +147,17 @@ module ForemanSetup
       end
 
       # Associate templates with OS and vice-versa
-      foreman14 = SETTINGS[:version].is_a? Foreman::Version
       if @provisioner.host.os.family == 'Redhat'
         tmpl_name = 'Kickstart'
         provision_tmpl_name = @provisioner.host.os.name == 'Redhat' ? 'RHEL Kickstart' : tmpl_name
         ipxe_tmpl_name = 'Kickstart'
-        ptable_name = foreman14 ? 'Kickstart default' : 'RedHat default'
+        ptable_name = 'Kickstart default'
       elsif @provisioner.host.os.family == 'Debian'
         tmpl_name = provision_tmpl_name = 'Preseed'
-        ptable_name = foreman14 ? 'Preseed default' : 'Ubuntu default'
+        ptable_name = 'Preseed default'
       end
 
-      ipxe_kind = foreman14 ? 'iPXE' : 'gPXE'
-      {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name, ipxe_kind => ipxe_tmpl_name}.each do |kind_name, tmpl_name|
+      {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name, 'iPXE' => ipxe_tmpl_name}.each do |kind_name, tmpl_name|
         next if tmpl_name.blank?
         kind = TemplateKind.find_by_name(kind_name)
         tmpls = ConfigTemplate.where('name LIKE ?', "#{tmpl_name}%").where(:template_kind_id => kind.id)
