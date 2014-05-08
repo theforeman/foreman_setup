@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.4
+* use foreman_url from settings, not browser URL for installer base URL
+* associate finish templates
+* remove JavaScript assets (#12)
+
 ## v2.0.3
 * fix Facter 2 compatibility
 
