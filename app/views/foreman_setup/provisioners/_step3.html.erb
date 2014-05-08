@@ -23,7 +23,7 @@ foreman-installer \
   --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
   --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
 <%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
-  --foreman-proxy-foreman-base-url=<%= root_url(:only_path => false).chomp('/') %> \
+  --foreman-proxy-foreman-base-url=<%= Setting[:foreman_url] %> \
   --foreman-proxy-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
   --foreman-proxy-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
 </pre>
@@ -41,7 +41,7 @@ foreman-installer \
   --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
   --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
 <%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
-  --foreman-proxy-foreman-base-url=<%= root_url(:only_path => false).chomp('/') %> \
+  --foreman-proxy-foreman-base-url=<%= Setting[:foreman_url] %> \
   --foreman-proxy-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
   --foreman-proxy-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
 </pre>
