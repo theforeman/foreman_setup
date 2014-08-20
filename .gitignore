@@ -11,3 +11,5 @@ Gemfile.lock
 pkg/
 public/
 tags
+locale/*.mo
+locale/*/*.pox
