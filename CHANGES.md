@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.0
+* i18n support (French and Spanish complete)
+
 ## v2.0.4
 * use foreman_url from settings, not browser URL for installer base URL
 * associate finish templates
