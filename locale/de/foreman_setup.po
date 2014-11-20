@@ -6,10 +6,10 @@
 # Ettore Atalan <atalanttore@googlemail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 2.0.4\n"
+"Project-Id-Version: foreman_setup 2.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-20 09:25+0100\n"
-"PO-Revision-Date: 2014-09-12 14:40+0000\n"
+"PO-Revision-Date: 2014-09-22 11:32+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/foreman/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgid ""
 msgstr ""
 
 msgid "Completion"
-msgstr ""
+msgstr "Fertigstellung"
 
 msgid "Compute Resources"
 msgstr "Rechnerresource"
@@ -121,7 +121,7 @@ msgid "No network interfaces listed in $interfaces fact"
 msgstr ""
 
 msgid "Normal installation media"
-msgstr ""
+msgstr "Normales Installationsmedium"
 
 msgid "Not available until pre-requisites satisified."
 msgstr ""
@@ -157,7 +157,7 @@ msgid "Provisioning setup complete"
 msgstr ""
 
 msgid "Red Hat Satellite 5 or Spacewalk"
-msgstr ""
+msgstr "Red Hat Satellite 5 oder Spacewalk"
 
 msgid "Return to the main provisioning setup page"
 msgstr ""
@@ -186,7 +186,7 @@ msgid "Successfully associated OS %s."
 msgstr ""
 
 msgid "Successfully updated subnet %s."
-msgstr ""
+msgstr "Subnetz %s erfolgreich aktualisiert."
 
 msgid "The DNS domain name to provision hosts into"
 msgstr ""
