@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.1
+* fix kickstart template name for RHEL (#8452)
+
 ## v2.1.0
 * i18n support (French and Spanish complete)
 
