@@ -15,7 +15,7 @@ module ForemanSetup
 
     initializer 'foreman_setup.register_plugin', :after=> :finisher_hook do |app|
       Foreman::Plugin.register :foreman_setup do
-        requires_foreman '> 1.4'
+        requires_foreman '>= 1.9.0'
 
         menu :top_menu, :provisioners, :url_hash => {:controller=> :'foreman_setup/provisioners', :action=>:index},
                  :caption=> N_('Provisioning setup'),

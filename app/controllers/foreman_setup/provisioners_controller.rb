@@ -93,7 +93,7 @@ module ForemanSetup
       url.save!
 
       # Build default PXE menu
-      status, msg = ConfigTemplate.build_pxe_default(self)
+      status, msg = ProvisioningTemplate.build_pxe_default(self)
       warning msg unless status == 200
 
       @provisioner.hostgroup.medium ||= @provisioner.host.os.media.first
@@ -162,7 +162,7 @@ module ForemanSetup
       {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name, 'iPXE' => ipxe_tmpl_name, 'finish' => finish_tmpl_name}.each do |kind_name, tmpl_name|
         next if tmpl_name.blank?
         kind = TemplateKind.find_by_name(kind_name)
-        tmpls = ConfigTemplate.where('name LIKE ?', "#{tmpl_name}%").where(:template_kind_id => kind.id)
+        tmpls = ProvisioningTemplate.where('name LIKE ?', "#{tmpl_name}%").where(:template_kind_id => kind.id)
         tmpls.any? || raise("cannot find template for #{@provisioner.host.os}")
 
         # prefer foreman_bootdisk templates
@@ -172,7 +172,7 @@ module ForemanSetup
         tmpl.save!
 
         unless @provisioner.host.os.os_default_templates.where(:template_kind_id => kind.id).any?
-          @provisioner.host.os.os_default_templates.build(:template_kind_id => kind.id, :config_template_id => tmpl.id)
+          @provisioner.host.os.os_default_templates.build(:template_kind_id => kind.id, :provisioning_template_id => tmpl.id)
         end
       end
 
