@@ -16,6 +16,14 @@ installation.
 RPM users can install the "ruby193-rubygem-foreman_setup" or
 "rubygem-foreman_setup" packages.
 
+## Compatibility
+
+| Foreman Version | Plugin Version |
+| --------------- | --------------:|
+| <= 1.4          | ~> 1.0         |
+| >= 1.5          | ~> 2.0         |
+| >= 1.9          | ~> 3.0         |
+
 # Areas this should help
 
 * take input of subnet and domain information

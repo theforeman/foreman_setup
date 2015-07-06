@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.0.0
+* show katello-installer commands if Katello is loaded
+* fix Foreman 1.9 compatibility due to template changes
+* this version (3.x) drops support for Foreman 1.8 and earlier
+
 ## v2.1.1
 * fix kickstart template name for RHEL (#8452)
 
