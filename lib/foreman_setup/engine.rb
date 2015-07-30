@@ -2,7 +2,7 @@ require 'foreman_setup'
 
 module ForemanSetup
   class Engine < ::Rails::Engine
-    engine_name ForemanSetup::ENGINE_NAME
+    engine_name 'foreman_setup'
 
     config.autoload_paths += Dir["#{config.root}/app/controllers/concerns"]
     config.autoload_paths += Dir["#{config.root}/app/helpers/concerns"]
@@ -34,14 +34,21 @@ module ForemanSetup
       locale_domain = 'foreman_setup'
       Foreman::Gettext::Support.add_text_domain locale_domain, locale_dir
     end
+
+    initializer 'foreman_setup.assets.precompile' do |app|
+      app.config.assets.precompile += ['foreman_setup/false.png']
+    end
+    initializer 'foreman_setup.configure_assets', group: :assets do
+      SETTINGS[:foreman_setup] = { assets: { precompile: ['foreman_setup/false.png'] } }
+    end
   end
 
   def table_name_prefix
-    ForemanSetup::ENGINE_NAME + '_'
+    'setup_'
   end
 
   def self.table_name_prefix
-    ForemanSetup::ENGINE_NAME + '_'
+    'setup_'
   end
 
   def use_relative_model_naming

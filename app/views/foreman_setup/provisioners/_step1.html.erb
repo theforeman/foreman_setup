@@ -13,7 +13,7 @@
     <% if f.object.host.present? %>
       <%= checked_icon f.object.host.present? %> <%= _("Found registered host %s") % f.object.host.name %>
     <% else %>
-      <%= image_tag 'false.png' %> <%= _("Missing registered host %s, please ensure it is checking in") % f.object.fqdn %>
+      <%= image_tag 'foreman_setup/false.png' %> <%= _("Missing registered host %s, please ensure it is checking in") % f.object.fqdn %>
     <% end %>
   </div>
   <div>
@@ -21,14 +21,14 @@
     <% if f.object.smart_proxy.present? %>
       <%= checked_icon f.object.smart_proxy.present? %> <%= _("Found registered smart proxy %s") % f.object.smart_proxy.name %>
     <% else %>
-      <%= image_tag 'false.png' %> <%= _("Missing registered smart proxy %s, please ensure it is registered") % f.object.fqdn %>
+      <%= image_tag 'foreman_setup/false.png' %> <%= _("Missing registered smart proxy %s, please ensure it is registered") % f.object.fqdn %>
     <% end %>
   </div>
   <div>
     <% if f.object.host.present? && f.object.interfaces.any? %>
       <%= checked_icon f.object.host.present? %> <%= _("Host %s has at least one network interface") % f.object.host.name %>
     <% else %>
-      <%= image_tag 'false.png' %> <%= _("No network interfaces listed in $interfaces fact") %>
+      <%= image_tag 'foreman_setup/false.png' %> <%= _("No network interfaces listed in $interfaces fact") %>
     <% end %>
   </div>
 
