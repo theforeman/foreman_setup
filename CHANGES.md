@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.0.1
+* remove dashboard button, use the menu instead
+* remove unused deface dependency
+* fix missing false.png image (#11115)
+
 ## v3.0.0
 * show katello-installer commands if Katello is loaded
 * fix Foreman 1.9 compatibility due to template changes
