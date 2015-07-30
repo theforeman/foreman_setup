@@ -27,10 +27,6 @@ module ForemanSetup
              :step2, :step2_update, :step3, :step4, :step4_update, :step5] }, :resource_type => "ForemanSetup::Provisioner"
         end
         role "Provisioning setup", [:edit_provisioning]
-
-        # we deliberately replace some text on the dashboard page, so this breaks
-        # the test.  The setup button ought to be moved somewhere else.
-        tests_to_skip('DashboardTest' => ['dashboard page']) if respond_to? :tests_to_skip
       end
     end
 
