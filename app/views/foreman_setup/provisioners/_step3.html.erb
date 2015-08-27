@@ -11,13 +11,13 @@
     <pre>
 <% if defined? Katello %>
   <% command = 'katello-installer' %>
-  <% parameter = 'capsule' %>
+  <% parameter = '--capsule' %>
 <% else %>
   <% command = 'foreman-installer' %>
-  <% parameter = 'foreman-proxy' %>
+  <% parameter = '--foreman-proxy' %>
 <% end%>
 <%= command %> \
-  --enable-<%= parameter %> \
+  --enable-<%= parameter[2..-1] %> \
   <%= parameter %>-tftp=true \
   <%= parameter %>-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
   <%= parameter %>-dhcp=true \
@@ -46,7 +46,7 @@
   <div>
     <pre>
 <%= command %> \
-  --enable-<%= parameter %> \
+  --enable-<%= parameter[2..-1] %> \
   <%= parameter %>-tftp=true \
   <%= parameter %>-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
   <%= parameter %>-dns=true \
