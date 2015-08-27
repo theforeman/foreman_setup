@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.0.2
+* fix missing hyphens in installer arguments (#11399)
+
 ## v3.0.1
 * remove dashboard button, use the menu instead
 * remove unused deface dependency
