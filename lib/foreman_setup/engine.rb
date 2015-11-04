@@ -9,7 +9,9 @@ module ForemanSetup
     config.autoload_paths += Dir["#{config.root}/app/models/concerns"]
 
     initializer "foreman_setup.load_app_instance_data" do |app|
-      app.config.paths['db/migrate'] += ForemanSetup::Engine.paths['db/migrate'].existent
+      ForemanSetup::Engine.paths['db/migrate'].existent.each do |path|
+        app.config.paths['db/migrate'] << path
+      end
     end
 
     initializer 'foreman_setup.register_plugin', :after=> :finisher_hook do |app|
