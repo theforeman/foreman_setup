@@ -1,5 +1,5 @@
 
-<%= form_for provisioner, :url => step2_update_foreman_setup_provisioner_path do |f| %>
+<%= form_for provisioner, :url => step2_update_foreman_setup_provisioner_path, :method => 'PUT' do |f| %>
   <%= base_errors_for provisioner %>
   <%= provisioner_wizard 2 %>
 
