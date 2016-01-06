@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.1.0
+* add Catalan language, update translations
+* fix compatibility with Rails 4 for Foreman 1.11
+* add tests
+
 ## v3.0.2
 * fix missing hyphens in installer arguments (#11399)
 
