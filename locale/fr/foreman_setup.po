@@ -3,16 +3,16 @@
 # This file is distributed under the same license as foreman_setup.
 # 
 # Translators:
-# Claer <transiblu@claer.hammock.fr>, 2014
+# Claer <transiblu@claer.hammock.fr>, 2014,2016
 # Pierre-Emmanuel Dutang <dutangp@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 2.1.0\n"
+"Project-Id-Version: foreman_setup 3.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-20 09:25+0100\n"
-"PO-Revision-Date: 2014-08-20 13:20+0000\n"
+"PO-Revision-Date: 2016-01-04 15:53+0000\n"
 "Last-Translator: Claer <transiblu@claer.hammock.fr>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/foreman/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/foreman/foreman/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,13 +32,13 @@ msgid ""
 "All of the necessary components have been set up for provisioning support.  "
 "You can now provision new hosts by registering them from the Hosts page, "
 "then PXE-boot the server on the subnet set up earlier."
-msgstr "Tous les composants nécessaires ont été configurés pour supporter le provisionnement. Vous pouvez maintenant provisionner de nouveaux hôtes en les enregistrant dans la page Hôtes. Puis, faites un démarrage PXE de l'hôte sur le sous réseau défini précédemment."
+msgstr "Tous les composants nécessaires ont été configurés pour supporter le provisioning. Vous pouvez maintenant déployer de nouveaux hôtes en les enregistrant dans la page Hôtes. Puis, faites un démarrage PXE de l'hôte sur le sous réseau défini précédemment."
 
 msgid ""
 "All of the necessary network information has been collected, now run the "
 "Foreman installer again with the necessary arguments to configure "
 "provisioning."
-msgstr "Toutes les informations nécessaires du réseau ont été collectées. Lancez de nouveau l'installateur de Foreman avec les arguments adéquats pour configurer le provisionnement."
+msgstr "Toutes les informations nécessaires du réseau ont été collectées. Lancez de nouveau l'installateur de Foreman avec les arguments adéquats pour configurer le provisioning."
 
 msgid "Completion"
 msgstr "Complétion"
@@ -89,10 +89,10 @@ msgid ""
 msgstr "Si un medium d'installation a déjà été configuré, ce dernier peut être choisi ci-dessous et l'assistant va compléter les associations nécessaires. Autrement, utiliser les champs suivants ou la page de gestion des media dans Foreman pour ajouter un nouveau medium."
 
 msgid "Install provisioning with DHCP"
-msgstr "Installation du provisionnement avec du DHCP"
+msgstr "Installation du provisioning avec du DHCP"
 
 msgid "Install provisioning without DHCP"
-msgstr "Installation du provisionnement sans DHCP"
+msgstr "Installation du provisioning sans DHCP"
 
 msgid "Installation media"
 msgstr "Média d'installation"
@@ -134,7 +134,7 @@ msgid "Path or URL"
 msgstr "Chemin ou URL"
 
 msgid "Plugin for Foreman that helps set up provisioning."
-msgstr "Plugin de Foreman pour aider à la mise en place du provisionnement"
+msgstr "Plugin de Foreman pour aider à la mise en place du provisioning."
 
 msgid "Pre-requisites"
 msgstr "Prérequis"
@@ -143,31 +143,31 @@ msgid "Provision from %s"
 msgstr "Provisionne depuis %s"
 
 msgid "Provisioning Setup"
-msgstr "Configuration du provisionnement"
+msgstr "Configuration du provisioning"
 
 msgid "Provisioning host"
-msgstr "Hôte de provisionnement "
+msgstr "Hôte pour le provisioning"
 
 msgid "Provisioning network"
-msgstr "Réseau de provisionnement "
+msgstr "Réseau du provisioning "
 
 msgid "Provisioning setup"
-msgstr "Configuration du provisionnement "
+msgstr "Configuration du provisioning"
 
 msgid "Provisioning setup complete"
-msgstr "Configuration du provisionnement terminée"
+msgstr "Configuration du provisioning terminée"
 
 msgid "Red Hat Satellite 5 or Spacewalk"
 msgstr "Red Hat Satellite 5 ou Spacewalk"
 
 msgid "Return to the main provisioning setup page"
-msgstr "Retour à la page principale de configuration du provisionnement"
+msgstr "Retour à la page principale de configuration du provisioning"
 
 msgid "Review and edit the host group set up by the provisioning wizard"
-msgstr "Consulter et éditer le groupe d'hôtes configuré par l'assistant du provisionnement"
+msgstr "Consulter et éditer le groupe d'hôtes configuré par l'assistant du provisioning"
 
 msgid "Set up provisioning"
-msgstr "Configurer le provisionnement"
+msgstr "Configurer le provisioning"
 
 msgid "Smart proxy"
 msgstr "Smart proxy"
@@ -175,7 +175,7 @@ msgstr "Smart proxy"
 msgid ""
 "Some information about the location of installation media for the operating "
 "system used for provisioning is now required."
-msgstr "Quelques informations sont maintenant requises à propos de la localisation du media d'installation pour le système d'exploitation utilisé pour le provisionnement."
+msgstr "Quelques informations sont maintenant requises à propos de l'emplacement du media d'installation pour le système d'exploitation utilisé pour le provisioning."
 
 msgid "Spacewalk hostname is missing"
 msgstr "Le nom d'hôte Spacewalk manquant"
@@ -197,10 +197,10 @@ msgid ""
 "e.g. Infrastructure > Subnets, and can be changed in the web interface.  You"
 " can return to this set up process through <b>Infrastructure > Provisioning "
 "Setup</b> to change settings or add new provisioning capabilities."
-msgstr "La configuration mise en place est accessible depuis le menu Infrastructure (par ex.: Infrastructure > Sous Réseaux) et peut être modifié depuis l'interface Web. Vous pouvez relancer ce processus de configuration par le menu <b>Infrastructure > Configuration du provisionnement</b> pour changer des options ou ajouter de nouvelles fonctions de provisionnement."
+msgstr "La configuration mise en place est accessible depuis le menu Infrastructure (par ex.: Infrastructure > Sous Réseaux) et peut être modifié depuis l'interface Web. Vous pouvez relancer ce processus de configuration par le menu <b>Infrastructure > Configuration du provisioning</b> pour changer des options ou ajouter de nouvelles fonctions de provisioning."
 
 msgid "The following operating system will be configured for provisioning:"
-msgstr "Le système d'exploitation suivant va être configuré pour le provisionnement :"
+msgstr "Le système d'exploitation suivant va être configuré pour le provisioning :"
 
 msgid ""
 "This wizard will help set up Foreman for full host provisioning.  Before we "
@@ -210,7 +210,7 @@ msgstr "Cet assistant va vous aider à configurer Foreman pour une automatisatio
 msgid ""
 "To provision hosts, some configuration values are needed for the "
 "provisioning subnet attached to the Foreman server."
-msgstr "Pour provisionner des hôtes, quelques valeurs de configuration sont nécessaires pour le sous réseau de provisionnement rattaché à Foreman"
+msgstr "Pour le provisioning des hôtes, quelques valeurs de configuration sont nécessaires pour le sous réseau de provisioning rattaché au serveur Foreman."
 
 msgid "Type"
 msgstr "Type"

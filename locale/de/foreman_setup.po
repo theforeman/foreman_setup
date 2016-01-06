@@ -3,15 +3,16 @@
 # This file is distributed under the same license as foreman_setup.
 # 
 # Translators:
+# Christina Gurski <Gurski_christina@yahoo.de>, 2015
 # Ettore Atalan <atalanttore@googlemail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 2.1.0\n"
+"Project-Id-Version: foreman_setup 3.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-20 09:25+0100\n"
-"PO-Revision-Date: 2014-09-22 11:32+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/foreman/language/de/)\n"
+"PO-Revision-Date: 2015-10-08 11:29+0000\n"
+"Last-Translator: Christina Gurski <Gurski_christina@yahoo.de>\n"
+"Language-Team: German (http://www.transifex.com/foreman/foreman/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,19 +26,19 @@ msgid "Activation key configuration"
 msgstr "Aktivierungsschlüsselkonfiguration"
 
 msgid "Add and manage compute resources (virtualization and cloud)"
-msgstr ""
+msgstr "Rechnerressourcen hinzufügen und verwalten (Virtualisierung und Cloud)"
 
 msgid ""
 "All of the necessary components have been set up for provisioning support.  "
 "You can now provision new hosts by registering them from the Hosts page, "
 "then PXE-boot the server on the subnet set up earlier."
-msgstr ""
+msgstr "Sämtliche benötigten Komponenten wurden für die Bereitstellungsunterstützung aufgesetzt. Sie können nun neue Hosts bereitstellen, indem Sie diese von der Hosts-Seite aus registrieren und danach den Server auf dem zuvor aufgesetzten Subnetz PXE-booten,."
 
 msgid ""
 "All of the necessary network information has been collected, now run the "
 "Foreman installer again with the necessary arguments to configure "
 "provisioning."
-msgstr ""
+msgstr "Alle erforderlichen Netzwerkinformationen wurden erfasst. Führen Sie das Foreman-Installationsprogramm erneut mit den erforderlichen Argumenten aus, um die Bereitstellung zu konfigurieren."
 
 msgid "Completion"
 msgstr "Fertigstellung"
@@ -46,10 +47,10 @@ msgid "Compute Resources"
 msgstr "Rechnerresource"
 
 msgid "Create and provision a new host"
-msgstr ""
+msgstr "Neuen Host erstellen und bereitstellen"
 
 msgid "Create new installation medium"
-msgstr ""
+msgstr "Neues Installationsmedium erstellen"
 
 msgid "Delete %s?"
 msgstr "%s löschen?"
@@ -70,13 +71,13 @@ msgid "Foreman installer"
 msgstr "Foreman-Installationsprogramm"
 
 msgid "Found registered host %s"
-msgstr ""
+msgstr "Registrierter Host %s gefunden"
 
 msgid "Found registered smart proxy %s"
-msgstr ""
+msgstr "Registrierter Smart-Proxy %s gefunden"
 
 msgid "Host %s has at least one network interface"
-msgstr ""
+msgstr "Host %s verfügt über mindestens eine Netzwerkschnitstelle"
 
 msgid "Hostname"
 msgstr "Hostname"
@@ -85,22 +86,22 @@ msgid ""
 "If installation media has already been set up, it can be selected below and "
 "the wizard will complete the necessary associations.  Otherwise use the "
 "fields below, or the Installation Media page in Foreman to add new media."
-msgstr ""
+msgstr "Wurde ein Installationsmedium bereits aufgesetzt, kann es unten ausgewählt werden, und der Assistent erledigt die erforderlichen Zuweisungen. Verwenden Sie andernfalls die Felder unten oder die Seite \"Installationsmedien\" in Foreman, um neue Medien hinzuzufügen."
 
 msgid "Install provisioning with DHCP"
-msgstr ""
+msgstr "Bereitstellung mit DHCP installieren"
 
 msgid "Install provisioning without DHCP"
-msgstr ""
+msgstr "Bereitstellung ohne DHCP installieren"
 
 msgid "Installation media"
 msgstr "Installationsmedien"
 
 msgid "Missing registered host %s, please ensure it is checking in"
-msgstr ""
+msgstr "Registrierter Host %s nicht gefunden. Bitte stellen Sie sicher, dass der Host sich anmeldet"
 
 msgid "Missing registered smart proxy %s, please ensure it is registered"
-msgstr ""
+msgstr "Registrierter Smart Proxy %s nicht gefunden, bitte sicherstellen, dass Smart Proxy registriert ist"
 
 msgid "Network config"
 msgstr "Netzwerkkonfiguration"
@@ -118,13 +119,13 @@ msgid "Next steps"
 msgstr "Nächste Schritte"
 
 msgid "No network interfaces listed in $interfaces fact"
-msgstr ""
+msgstr "Keine Netzwerkschnittstellen im Fact $interfaces angegeben"
 
 msgid "Normal installation media"
 msgstr "Normales Installationsmedium"
 
 msgid "Not available until pre-requisites satisified."
-msgstr ""
+msgstr "Nicht verfügbar, bis die Vorbedingungen erfüllt sind."
 
 msgid "Operating system"
 msgstr "Betriebssystem"
@@ -133,40 +134,40 @@ msgid "Path or URL"
 msgstr "Pfad oder URL"
 
 msgid "Plugin for Foreman that helps set up provisioning."
-msgstr ""
+msgstr "Plugin für Foreman zur Unterstützung beim Aufsetzen der Bereitstellung "
 
 msgid "Pre-requisites"
-msgstr ""
+msgstr "Vorbedingungen"
 
 msgid "Provision from %s"
-msgstr ""
+msgstr "Bereitstellen von %s"
 
 msgid "Provisioning Setup"
 msgstr "Bereitstellungs-Setup"
 
 msgid "Provisioning host"
-msgstr ""
+msgstr "Bereitstellungshost"
 
 msgid "Provisioning network"
-msgstr ""
+msgstr "Bereitstellungs-Netzwerk"
 
 msgid "Provisioning setup"
-msgstr ""
+msgstr "Bereitstellungs-Setup"
 
 msgid "Provisioning setup complete"
-msgstr ""
+msgstr "Bereitstellungs-Setup abgeschlossen"
 
 msgid "Red Hat Satellite 5 or Spacewalk"
 msgstr "Red Hat Satellite 5 oder Spacewalk"
 
 msgid "Return to the main provisioning setup page"
-msgstr ""
+msgstr "Zur Hauptseite des Bereitstellungs-Setups zurückkehren"
 
 msgid "Review and edit the host group set up by the provisioning wizard"
-msgstr ""
+msgstr "Durch den Bereitstellungs-Assistenten aufgesetzte Hostgruppen prüfen und bearbeiten"
 
 msgid "Set up provisioning"
-msgstr ""
+msgstr "Bereitstellung aufsetzen"
 
 msgid "Smart proxy"
 msgstr "Smart Proxy"
@@ -174,7 +175,7 @@ msgstr "Smart Proxy"
 msgid ""
 "Some information about the location of installation media for the operating "
 "system used for provisioning is now required."
-msgstr ""
+msgstr "Nun sind einige Informationen zum Standort der Installationsmedien für das Betriebssystem erforderlich, die für die Bereitstellung verwendet werden."
 
 msgid "Spacewalk hostname is missing"
 msgstr "Spacewalk-Hostname fehlt"
@@ -183,41 +184,41 @@ msgid "Subnet"
 msgstr "Subnetz"
 
 msgid "Successfully associated OS %s."
-msgstr ""
+msgstr "OS %s erfolgreich verbunden"
 
 msgid "Successfully updated subnet %s."
 msgstr "Subnetz %s erfolgreich aktualisiert."
 
 msgid "The DNS domain name to provision hosts into"
-msgstr ""
+msgstr "Der DNS-Domänenname, in dem Hosts bereitgestellt werden"
 
 msgid ""
 "The configuration set up is all accessible under the Infrastructure menu, "
 "e.g. Infrastructure > Subnets, and can be changed in the web interface.  You"
 " can return to this set up process through <b>Infrastructure > Provisioning "
 "Setup</b> to change settings or add new provisioning capabilities."
-msgstr ""
+msgstr "Der Zugriff auf das gesamte Konfigurations-Setup ist im Menü \"Infrastruktur\", z.B. Infrastruktur > Subnetze, möglich und kann im Webinterface geändert werden. Über <b>Infrastruktur > Bereitstellungs-Setup</b> können Sie zu diesem Setup-Prozess zurückkehren, um die Einstellungen zu ändern oder neue Bereitstellungs-Ressourcen hinzuzufügen."
 
 msgid "The following operating system will be configured for provisioning:"
-msgstr ""
+msgstr "Folgendes Betriebssystem wird für die Bereitstellung konfiguriert:"
 
 msgid ""
 "This wizard will help set up Foreman for full host provisioning.  Before we "
 "begin, a few requirements will be verified."
-msgstr ""
+msgstr "Dieser Assistent unterstützt Sie bei der Einrichtung von Foreman zur vollständigen Hostbereitstellung. Bevor wir beginnen, sind einige Anforderungen zu verifizieren."
 
 msgid ""
 "To provision hosts, some configuration values are needed for the "
 "provisioning subnet attached to the Foreman server."
-msgstr ""
+msgstr "Um Hosts bereitzustellen, werden einige Konfigurationswerte für die Bereitstellung des mit dem Foreman-Server verbundenen Subnetzes benötigt."
 
 msgid "Type"
 msgstr "Typ"
 
 msgid "Use an existing installation medium"
-msgstr ""
+msgstr "Vorhandenes Installationsmedium verwenden"
 
 msgid ""
 "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an "
 "appropriate activation key below, otherwise leave blank."
-msgstr ""
+msgstr "User, die Spacewalk, Red Hat Network, oder Red Hat Satellite 5 verwenden, sollten unten  einen zugehörigen Aktivierungsschlüssel eingeben. Andernfalls bitte freilassen."

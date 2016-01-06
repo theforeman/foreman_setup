@@ -3,14 +3,16 @@
 # This file is distributed under the same license as foreman_setup.
 # 
 # Translators:
+# luizvasconcelos <luizvasconceloss@yahoo.com.br>, 2015
+# Odilhao <odilon.junior93@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 2.1.0\n"
+"Project-Id-Version: foreman_setup 3.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-20 09:25+0100\n"
-"PO-Revision-Date: 2014-08-20 08:30+0000\n"
-"Last-Translator: Dominic Cleal <dcleal@redhat.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/foreman/language/pt_BR/)\n"
+"PO-Revision-Date: 2015-10-08 11:29+0000\n"
+"Last-Translator: Odilhao <odilon.junior93@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/foreman/foreman/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,10 +20,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "Activation key"
-msgstr ""
+msgstr "Chave de ativação"
 
 msgid "Activation key configuration"
-msgstr ""
+msgstr "Configuração da chave de ativação"
 
 msgid "Add and manage compute resources (virtualization and cloud)"
 msgstr ""
@@ -45,10 +47,10 @@ msgid "Compute Resources"
 msgstr "Recursos de computação"
 
 msgid "Create and provision a new host"
-msgstr ""
+msgstr "Criar e provisionar um novo host"
 
 msgid "Create new installation medium"
-msgstr ""
+msgstr "Criar um nova mídia de instalação"
 
 msgid "Delete %s?"
 msgstr "Apagar %s"
@@ -60,10 +62,10 @@ msgid "Domain|Name"
 msgstr "DNS domain"
 
 msgid "Edit Host Group"
-msgstr ""
+msgstr "Editar grupo de host"
 
 msgid "Existing medium"
-msgstr ""
+msgstr "Mídia existente"
 
 msgid "Foreman installer"
 msgstr ""
@@ -102,40 +104,40 @@ msgid "Missing registered smart proxy %s, please ensure it is registered"
 msgstr ""
 
 msgid "Network config"
-msgstr ""
+msgstr "Configuração de rede"
 
 msgid "Network selection"
-msgstr ""
+msgstr "Seleção de rede"
 
 msgid "New Host"
 msgstr "Novo host"
 
 msgid "Next"
-msgstr ""
+msgstr "Próximo"
 
 msgid "Next steps"
-msgstr ""
+msgstr "Próximos passos"
 
 msgid "No network interfaces listed in $interfaces fact"
-msgstr ""
+msgstr "Nenhuma interface de rede listada no fato $interfaces"
 
 msgid "Normal installation media"
-msgstr ""
+msgstr "Mídia de instalação Normal"
 
 msgid "Not available until pre-requisites satisified."
-msgstr ""
+msgstr "Não disponível até os pré-requisitos serem satisfeitos."
 
 msgid "Operating system"
 msgstr "Sistema Operacional"
 
 msgid "Path or URL"
-msgstr ""
+msgstr "Caminho ou URL"
 
 msgid "Plugin for Foreman that helps set up provisioning."
-msgstr ""
+msgstr "Plugin do Foreman que ajuda a configurar o provisionamento."
 
 msgid "Pre-requisites"
-msgstr ""
+msgstr "Pré-requisitos"
 
 msgid "Provision from %s"
 msgstr ""
@@ -144,28 +146,28 @@ msgid "Provisioning Setup"
 msgstr "Configuração de Provisionamento"
 
 msgid "Provisioning host"
-msgstr ""
+msgstr "Provisionamento de hosts"
 
 msgid "Provisioning network"
-msgstr ""
+msgstr "Provisionamento de rede"
 
 msgid "Provisioning setup"
-msgstr ""
+msgstr "Provisionamento de configuração"
 
 msgid "Provisioning setup complete"
-msgstr ""
+msgstr "Provisionamento de configuração completo"
 
 msgid "Red Hat Satellite 5 or Spacewalk"
-msgstr ""
+msgstr "Red Hat Satellite 5 ou Spacewalk"
 
 msgid "Return to the main provisioning setup page"
-msgstr ""
+msgstr "Retornar para a tela principal de configuração do provisionamento"
 
 msgid "Review and edit the host group set up by the provisioning wizard"
 msgstr ""
 
 msgid "Set up provisioning"
-msgstr ""
+msgstr "Configurar o provisionamento"
 
 msgid "Smart proxy"
 msgstr "Smart proxy"
@@ -214,9 +216,9 @@ msgid "Type"
 msgstr "Tipo"
 
 msgid "Use an existing installation medium"
-msgstr ""
+msgstr "Usar uma media de instalação que já existe"
 
 msgid ""
 "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an "
 "appropriate activation key below, otherwise leave blank."
-msgstr ""
+msgstr "Usuários do Spacewalk, Red Hat Network, ou Red Hat Satellite 5 devem entrar com uma chave de ativação apropriada abaixo, ou então deixá-la em branco"
