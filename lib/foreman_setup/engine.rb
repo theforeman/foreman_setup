@@ -14,7 +14,7 @@ module ForemanSetup
       end
     end
 
-    initializer 'foreman_setup.register_plugin', :after=> :finisher_hook do |app|
+    initializer 'foreman_setup.register_plugin', :before => :finisher_hook do |app|
       Foreman::Plugin.register :foreman_setup do
         requires_foreman '>= 1.9.0'
 
