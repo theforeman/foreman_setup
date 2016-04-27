@@ -28,7 +28,7 @@ FactoryGirl.define do
       step1
       hostgroup
       domain
-      subnet
+      association :subnet, :factory => :subnet_ipv4
       after(:create) do |prov, evaluator|
         prov.subnet.domains << prov.domain
       end
