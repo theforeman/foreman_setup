@@ -16,6 +16,7 @@ namespace :test do
     t.libs << ['test', test_dir]
     t.pattern = "#{test_dir}/**/*_test.rb"
     t.verbose = true
+    t.warning = false
   end
 end
 
@@ -36,14 +37,9 @@ namespace :foreman_setup do
   end
 end
 
-Rake::Task[:test].enhance do
-  Rake::Task['test:foreman_setup'].invoke
-end
+Rake::Task[:test].enhance ['test:foreman_setup']
 
 load 'tasks/jenkins.rake'
 if Rake::Task.task_defined?(:'jenkins:unit')
-  Rake::Task['jenkins:unit'].enhance do
-    Rake::Task['test:foreman_setup'].invoke
-    Rake::Task['foreman_setup:rubocop'].invoke
-  end
+  Rake::Task['jenkins:unit'].enhance ['test:foreman_setup', 'foreman_setup:rubocop']
 end
