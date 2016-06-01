@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.1.1
+* update DB migration limits for Rails 4.2 change
+* fix Rails 4.2 routing deprecation
+* fix Foreman 1.11 registration deprecation
+* fix tests against develop, catch test errors
+
 ## v3.1.0
 * add Catalan language, update translations
 * fix compatibility with Rails 4 for Foreman 1.11
