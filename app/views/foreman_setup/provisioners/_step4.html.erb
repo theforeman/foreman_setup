@@ -28,35 +28,17 @@
 
   <h4><%= _("Operating system") %></h4>
   <p><%= _("The following operating system will be configured for provisioning:") %></p>
-  <%= (icon(f.object.host.os, :size => "18x18") + " #{f.object.host.os}").html_safe %>
+  <%= content_tag(:div, :style => 'margin-left: 20px; margin-bottom: 30px;') { (icon(f.object.host.os, :size => "18x18") + " #{f.object.host.os}").html_safe } %>
 
-  <h6><%= _("Use an existing installation medium") %></h6>
+  <h5><%= _("Use an existing installation medium") %></h5>
   <%= f.fields_for :hostgroup do |hgf| %>
     <%= select_f hgf, :medium_id, Medium.all, :id, :name, {:include_blank => true}, {:label => _("Existing medium")} %>
   <% end %>
 
-  <h6><%= _("Create new installation medium") %></h6>
+  <h5><%= _("Create new installation medium") %></h5>
   <%= f.fields_for :create_medium, @medium do |mf| %>
     <%= text_f mf, :name, :onchange => 'setup_media_create_change(this)' %>
-
-    <%= label_tag('', :class => 'radio inline') do %>
-      <% radio_button_tag(:medium_type, :path, true, :onchange => 'setup_media_change(this); setup_media_create_change(this)') + _("Normal installation media") %>
-    <% end %>
     <%= text_f mf, :path, :label => _("Path or URL") %>
-
-    <%= label_tag('', :class => 'radio inline') do %>
-      <% radio_button_tag(:medium_type, :spacewalk, false, :onchange => 'setup_media_change(this); setup_media_create_change(this)') + _("Red Hat Satellite 5 or Spacewalk") %>
-    <% end %>
-    <%= field(f, :spacewalk_hostname, :label => _("Hostname")) { text_field_tag :spacewalk_hostname, nil, :disabled => true } %>
-  <% end %>
-
-  <h4><%= _("Activation key configuration") %></h4>
-  <p><%= _("Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank.") %></p>
-  <%= f.fields_for :satellite_type, @satellite_type do |stf| %>
-    <%= selectable_f stf, :value, [['Red Hat Satellite or Spacewalk', 'site'], ['Red Hat Network', 'hosted']], {:include_blank => true}, {:label => _("Type")} %>
-  <% end %>
-  <%= f.fields_for :activation_key, @activation_key do |akf| %>
-    <%= text_f akf, :value, :label => _("Activation key") %>
   <% end %>
 
   <%= submit_or_cancel f, false, {:cancel_path => foreman_setup_provisioners_path, :disabled => !(f.object.host.present? && f.object.smart_proxy.present?)} %>

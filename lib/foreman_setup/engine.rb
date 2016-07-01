@@ -16,7 +16,7 @@ module ForemanSetup
 
     initializer 'foreman_setup.register_plugin', :before => :finisher_hook do |app|
       Foreman::Plugin.register :foreman_setup do
-        requires_foreman '>= 1.9.0'
+        requires_foreman '>= 1.12.0'
 
         menu :top_menu, :provisioners, :url_hash => {:controller=> :'foreman_setup/provisioners', :action=>:index},
                  :caption=> N_('Provisioning setup'),
@@ -35,13 +35,6 @@ module ForemanSetup
       locale_dir = File.join(File.expand_path('../../..', __FILE__), 'locale')
       locale_domain = 'foreman_setup'
       Foreman::Gettext::Support.add_text_domain locale_domain, locale_dir
-    end
-
-    initializer 'foreman_setup.assets.precompile' do |app|
-      app.config.assets.precompile += ['foreman_setup/false.png']
-    end
-    initializer 'foreman_setup.configure_assets', group: :assets do
-      SETTINGS[:foreman_setup] = { assets: { precompile: ['foreman_setup/false.png'] } }
     end
   end
 

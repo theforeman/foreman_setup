@@ -124,8 +124,6 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
     attrs = {
       :hostgroup_attributes => {},
       :create_medium => {:name => 'test', :path => 'http://mirror.example.com'},
-      :activation_key => {},
-      :satellite_type => {},
     }
     put :step4_update, {:id => prov.id, 'foreman_setup_provisioner' => attrs}, set_session_user
     assert_redirected_to step5_foreman_setup_provisioner_path(prov)
