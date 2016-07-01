@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.0.0
+* fix Foreman 1.12 compatibility with icons, CSS, template rendering etc.
+* fix empty DHCP range in installer arguments if left blank
+* remove Spacewalk functionality
+
 ## v3.1.1
 * update DB migration limits for Rails 4.2 change
 * fix Rails 4.2 routing deprecation

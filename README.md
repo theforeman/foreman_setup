@@ -13,7 +13,7 @@ Please see the Foreman wiki for appropriate instructions:
 The gem name is "foreman_setup".  Run `foreman-rake db:migrate` after
 installation.
 
-RPM users can install the "ruby193-rubygem-foreman_setup" or
+RPM users can install the "tfm-rubygem-foreman_setup" or
 "rubygem-foreman_setup" packages.
 
 ## Compatibility
@@ -23,6 +23,7 @@ RPM users can install the "ruby193-rubygem-foreman_setup" or
 | <= 1.4          | ~> 1.0         |
 | >= 1.5          | ~> 2.0         |
 | >= 1.9          | ~> 3.0         |
+| >= 1.12         | ~> 4.0         |
 
 # Areas this should help
 
