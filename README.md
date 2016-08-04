@@ -24,6 +24,7 @@ RPM users can install the "tfm-rubygem-foreman_setup" or
 | >= 1.5          | ~> 2.0         |
 | >= 1.9          | ~> 3.0         |
 | >= 1.12         | ~> 4.0         |
+| >= 1.13         | ~> 5.0         |
 
 # Areas this should help
 

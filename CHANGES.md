@@ -1,5 +1,8 @@
 # Changelog
 
+## v5.0.0
+* fix Foreman 1.13 compatibility with parameter filtering
+
 ## v4.0.0
 * fix Foreman 1.12 compatibility with icons, CSS, template rendering etc.
 * fix empty DHCP range in installer arguments if left blank
