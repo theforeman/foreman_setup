@@ -3,6 +3,8 @@ require 'facter'
 module ForemanSetup
   class ProvisionersController < ::ApplicationController
     include Foreman::Controller::ProvisioningTemplates
+    include Foreman::Controller::Parameters::Medium
+    include Foreman::Controller::Parameters::Subnet
     include Foreman::Renderer
 
     before_filter :find_myself, :only => [:new, :create]
@@ -27,7 +29,7 @@ module ForemanSetup
     end
 
     def create
-      @provisioner = Provisioner.new(params['foreman_setup_provisioner'])
+      @provisioner = Provisioner.new(provisioner_params)
       if @provisioner.save
         redirect_to step2_foreman_setup_provisioner_path(@provisioner)
       else
@@ -52,11 +54,11 @@ module ForemanSetup
     def step2_update
       @provisioner.hostgroup ||= Hostgroup.where(:name => _("Provision from %s") % @provisioner.fqdn).first_or_create
       @provisioner.subnet ||= Subnet.find_by_id(params['foreman_setup_provisioner']['subnet_attributes']['id'])
-      domain_name = params['foreman_setup_provisioner'].delete('domain_name')
+      domain_name = provisioner_params['domain_name']
       @provisioner.domain = Domain.find_by_name(domain_name)
       @provisioner.domain ||= Domain.new(:name => domain_name)
 
-      if @provisioner.update_attributes(params['foreman_setup_provisioner'])
+      if @provisioner.update_attributes(provisioner_params)
         @provisioner.subnet.domains << @provisioner.domain unless @provisioner.subnet.domains.include? @provisioner.domain
         process_success :success_msg => _("Successfully updated subnet %s.") % @provisioner.subnet.name, :success_redirect => step3_foreman_setup_provisioner_path
       else
@@ -98,7 +100,7 @@ module ForemanSetup
       warning msg unless status == 200
 
       @provisioner.hostgroup.medium ||= @provisioner.host.os.media.first
-      @medium = Medium.new(params['foreman_setup_provisioner'].try(:[], 'medium_attributes'))
+      @medium = Medium.new(provisioner_params.try(:[], 'medium_attributes'))
     end
 
     def step4_update
@@ -107,7 +109,7 @@ module ForemanSetup
         @medium = Medium.find(medium_id) || raise('unable to find medium')
       else
         @provisioner.hostgroup.medium_id = nil
-        @medium = Medium.new(params['foreman_setup_provisioner']['create_medium'].slice(:name, :path))
+        @medium = Medium.new(provisioner_params['create_medium'].slice(:name, :path))
       end
 
       # Associate medium with the host OS
@@ -176,5 +178,26 @@ module ForemanSetup
       @provisioner = Provisioner.authorized(:edit_provisioning).find(params[:id]) or raise('unknown id')
     end
 
+    def provisioner_params
+      @provisioner_params ||=
+        begin
+          medium_attrs = self.class.medium_params_filter.filter(parameter_filter_context)
+          subnet_attrs = self.class.subnet_params_filter.filter(parameter_filter_context)
+
+          params.permit(:'foreman_setup_provisioner' => [
+            :domain_name,
+            :host,
+            :host_id,
+            :provision_interface,
+            :smart_proxy,
+            :smart_proxy_id,
+            :subnet,
+            :create_medium => medium_attrs,
+            :hostgroup_attributes => [:id],
+            :medium_attributes => medium_attrs,
+            :subnet_attributes => subnet_attrs,
+          ])['foreman_setup_provisioner']
+        end
+    end
   end
 end

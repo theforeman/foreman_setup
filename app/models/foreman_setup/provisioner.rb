@@ -5,8 +5,6 @@ module ForemanSetup
     include ::Authorizable
     include ::Host::Hostmix
 
-    attr_accessible :host, :smart_proxy, :host_id, :smart_proxy_id, :provision_interface, :domain_name, :subnet, :subnet_attributes
-
     before_save :populate_hostgroup
 
     belongs_to_host
