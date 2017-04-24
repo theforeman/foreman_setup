@@ -33,9 +33,11 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
 
       prov = ForemanSetup::Provisioner.find_by_host_id(@host.id)
       assert prov
-      assert_equal @host, prov.host
-      assert_equal @proxy, prov.smart_proxy
-      assert_equal 'eth0', prov.provision_interface
+      as_admin do
+        assert_equal @host, prov.host
+        assert_equal @proxy, prov.smart_proxy
+        assert_equal 'eth0', prov.provision_interface
+      end
 
       assert_redirected_to step2_foreman_setup_provisioner_path(prov)
     end
@@ -69,23 +71,25 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
     put :step2_update, {:id => prov.id, 'foreman_setup_provisioner' => {:subnet_attributes => {'name' => 'test', :network => '192.168.1.0', :mask => '255.255.255.0'}, :domain_name => prov.host.domain.name}}, set_session_user
     assert_redirected_to step3_foreman_setup_provisioner_path(prov)
 
-    prov.reload
+    as_admin do
+      prov.reload
 
-    # Check new hg was created
-    assert Hostgroup.find_by_name("Provision from #{prov.host.name}")
-    assert prov.hostgroup
+      # Check new hg was created
+      assert Hostgroup.find_by_name("Provision from #{prov.host.name}")
+      assert prov.hostgroup
 
-    # Check nested subnet was created and saved
-    subnet = Subnet.find_by_network('192.168.1.0')
-    assert subnet
-    assert_equal 'test', subnet.name
-    assert prov.subnet
+      # Check nested subnet was created and saved
+      subnet = Subnet.find_by_network('192.168.1.0')
+      assert subnet
+      assert_equal 'test', subnet.name
+      assert prov.subnet
 
-    # Check domain was saved
-    assert_equal prov.host.domain, prov.domain
+      # Check domain was saved
+      assert_equal prov.host.domain, prov.domain
 
-    # Check domain/subnet association
-    assert_includes prov.domain.subnets, subnet
+      # Check domain/subnet association
+      assert_includes prov.domain.subnets, subnet
+    end
   end
 
   test '#step3' do
@@ -109,13 +113,15 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
     assert_template 'foreman_setup/provisioners/_step4'
     assert assigns(:medium)
 
-    prov.reload
+    as_admin do
+      prov.reload
 
-    # Check proxy feature-based assignments worked
-    assert_equal prov.smart_proxy.id, prov.subnet.dns_id
-    # assert_equal prov.smart_proxy.id, prov.domain.dns_id # BUG, not saved
-    assert_equal prov.smart_proxy.id, prov.subnet.dhcp_id
-    assert_equal prov.smart_proxy.id, prov.subnet.tftp_id
+      # Check proxy feature-based assignments worked
+      assert_equal prov.smart_proxy.id, prov.subnet.dns_id
+      # assert_equal prov.smart_proxy.id, prov.domain.dns_id # BUG, not saved
+      assert_equal prov.smart_proxy.id, prov.subnet.dhcp_id
+      assert_equal prov.smart_proxy.id, prov.subnet.tftp_id
+    end
   end
 
   test '#step4_update' do
@@ -128,15 +134,17 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
     put :step4_update, {:id => prov.id, 'foreman_setup_provisioner' => attrs}, set_session_user
     assert_redirected_to step5_foreman_setup_provisioner_path(prov)
 
-    prov.reload
+    as_admin do
+      prov.reload
 
-    assert prov.hostgroup.medium
-    assert_equal 'test', prov.hostgroup.medium.name
-    assert_equal 'http://mirror.example.com', prov.hostgroup.medium.path
+      assert prov.hostgroup.medium
+      assert_equal 'test', prov.hostgroup.medium.name
+      assert_equal 'http://mirror.example.com', prov.hostgroup.medium.path
 
-    assert prov.hostgroup.ptable
+      assert prov.hostgroup.ptable
 
-    # TODO: assert that the OS and templates are all correctly associated
+      # TODO: assert that the OS and templates are all correctly associated
+    end
   end
 
   test '#step5' do
