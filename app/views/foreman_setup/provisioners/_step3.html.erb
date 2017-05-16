@@ -9,37 +9,30 @@
   <h4><%= _("Install provisioning with DHCP") %></h4>
   <div>
     <pre>
-<% if defined? Katello %>
-  <% command = 'katello-installer' %>
-  <% parameter = '--capsule' %>
-<% else %>
-  <% command = 'foreman-installer' %>
-  <% parameter = '--foreman-proxy' %>
-<% end%>
-<%= command %> \
+foreman-installer \
   --enable-<%= parameter[2..-1] %> \
-  <%= parameter %>-tftp=true \
-  <%= parameter %>-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
-  <%= parameter %>-dhcp=true \
-  <%= parameter %>-dhcp-interface=<%= provisioner.provision_interface %> \
-  <%= parameter %>-dhcp-gateway=<%= provisioner.subnet.gateway %> \
+  --foreman-proxy-tftp=true \
+  --foreman-proxy-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
+  --foreman-proxy-dhcp=true \
+  --foreman-proxy-dhcp-interface=<%= provisioner.provision_interface %> \
+  --foreman-proxy-dhcp-gateway=<%= provisioner.subnet.gateway %> \
 <% if provisioner.subnet.from.present? && provisioner.subnet.to.present? %>
-  <%= parameter %>-dhcp-range="<%= provisioner.subnet.from %> <%= provisioner.subnet.to %>" \
+  --foreman-proxy-dhcp-range="<%= provisioner.subnet.from %> <%= provisioner.subnet.to %>" \
 <% end %>
-  <%= parameter %>-dhcp-nameservers="<%= provisioner.subnet.dns_primary %><%= ("," + provisioner.subnet.dns_secondary) unless provisioner.subnet.dns_secondary.blank? %>" \
-  <%= parameter %>-dns=true \
-  <%= parameter %>-dns-interface=<%= provisioner.provision_interface %> \
-  <%= parameter %>-dns-zone=<%= provisioner.domain.name %> \
-  <%= parameter %>-dns-reverse=<%= provisioner.rdns_zone %> \
+  --foreman-proxy-dhcp-nameservers="<%= provisioner.subnet.dns_primary %><%= ("," + provisioner.subnet.dns_secondary) unless provisioner.subnet.dns_secondary.blank? %>" \
+  --foreman-proxy-dns=true \
+  --foreman-proxy-dns-interface=<%= provisioner.provision_interface %> \
+  --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
+  --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
 <%= provisioner.dns_forwarders.map { |f| "  #{parameter}-dns-forwarders=#{f} \\" }.join("\n") %>
 <% if defined? Katello %>
-  <%= parameter %>-parent-fqdn=<%= Setting[:foreman_url] %> \
-  <%= parameter %>-foreman-oauth-key=<%= Setting[:oauth_consumer_key] %> \
-  <%= parameter %>-foreman-oauth-secret=<%= Setting[:oauth_consumer_secret] %>
+  --foreman-proxy-parent-fqdn=<%= Setting[:foreman_url] %> \
+  --foreman-proxy-foreman-oauth-key=<%= Setting[:oauth_consumer_key] %> \
+  --foreman-proxy-foreman-oauth-secret=<%= Setting[:oauth_consumer_secret] %>
 <% else %>
-  <%= parameter %>-foreman-base-url=<%= Setting[:foreman_url] %> \
-  <%= parameter %>-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
-  <%= parameter %>-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
+  --foreman-proxy-foreman-base-url=<%= Setting[:foreman_url] %> \
+  --foreman-proxy-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
+  --foreman-proxy-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
 <% end %>
 </pre>
   </div>
@@ -47,23 +40,23 @@
   <h4><%= _("Install provisioning without DHCP") %></h4>
   <div>
     <pre>
-<%= command %> \
+foreman-installer \
   --enable-<%= parameter[2..-1] %> \
-  <%= parameter %>-tftp=true \
-  <%= parameter %>-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
-  <%= parameter %>-dns=true \
-  <%= parameter %>-dns-interface=<%= provisioner.provision_interface %> \
-  <%= parameter %>-dns-zone=<%= provisioner.domain.name %> \
-  <%= parameter %>-dns-reverse=<%= provisioner.rdns_zone %> \
+  --foreman-proxy-tftp=true \
+  --foreman-proxy-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
+  --foreman-proxy-dns=true \
+  --foreman-proxy-dns-interface=<%= provisioner.provision_interface %> \
+  --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
+  --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
 <%= provisioner.dns_forwarders.map { |f| "  #{parameter}-dns-forwarders=#{f} \\" }.join("\n") %>
 <% if defined? Katello %>
-  <%= parameter %>-parent-fqdn=<%= Setting[:foreman_url] %> \
-  <%= parameter %>-foreman-oauth-key=<%= Setting[:oauth_consumer_key] %> \
-  <%= parameter %>-foreman-oauth-secret=<%= Setting[:oauth_consumer_secret] %>
+  --foreman-proxy-parent-fqdn=<%= Setting[:foreman_url] %> \
+  --foreman-proxy-foreman-oauth-key=<%= Setting[:oauth_consumer_key] %> \
+  --foreman-proxy-foreman-oauth-secret=<%= Setting[:oauth_consumer_secret] %>
 <% else %>
-  <%= parameter %>-foreman-base-url=<%= Setting[:foreman_url] %> \
-  <%= parameter %>-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
-  <%= parameter %>-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
+  --foreman-proxy-foreman-base-url=<%= Setting[:foreman_url] %> \
+  --foreman-proxy-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
+  --foreman-proxy-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
 <% end %>
 </pre>
   </div>
