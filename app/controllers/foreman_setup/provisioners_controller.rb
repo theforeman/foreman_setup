@@ -121,9 +121,9 @@ module ForemanSetup
       end
 
       # Associate templates with OS and vice-versa
-      if @provisioner.host.os.family == 'Redhat'
+      if @provisioner.host.os.family && @provisioner.host.os.family.casecmp('Redhat').zero?
         tmpl_name = 'Kickstart'
-        provision_tmpl_name = @provisioner.host.os.name == 'Redhat' ? 'Kickstart RHEL' : tmpl_name
+        provision_tmpl_name = @provisioner.host.os.name.casecmp('Redhat').zero? ? 'Kickstart RHEL' : tmpl_name
         ipxe_tmpl_name = 'Kickstart'
         finish_tmpl_name = 'Kickstart default finish'
         ptable_name = 'Kickstart default'
