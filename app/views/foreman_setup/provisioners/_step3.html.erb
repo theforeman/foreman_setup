@@ -10,7 +10,7 @@
   <div>
     <pre>
 foreman-installer \
-  --enable-<%= parameter[2..-1] %> \
+  --enable-foreman-proxy \
   --foreman-proxy-tftp=true \
   --foreman-proxy-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
   --foreman-proxy-dhcp=true \
@@ -24,7 +24,7 @@ foreman-installer \
   --foreman-proxy-dns-interface=<%= provisioner.provision_interface %> \
   --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
   --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
-<%= provisioner.dns_forwarders.map { |f| "  #{parameter}-dns-forwarders=#{f} \\" }.join("\n") %>
+<%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
 <% if defined? Katello %>
   --foreman-proxy-parent-fqdn=<%= Setting[:foreman_url] %> \
   --foreman-proxy-foreman-oauth-key=<%= Setting[:oauth_consumer_key] %> \
@@ -41,14 +41,14 @@ foreman-installer \
   <div>
     <pre>
 foreman-installer \
-  --enable-<%= parameter[2..-1] %> \
+  --enable-foreman-proxy \
   --foreman-proxy-tftp=true \
   --foreman-proxy-tftp-servername=<%= provisioner.provision_interface_data[:ip] %> \
   --foreman-proxy-dns=true \
   --foreman-proxy-dns-interface=<%= provisioner.provision_interface %> \
   --foreman-proxy-dns-zone=<%= provisioner.domain.name %> \
   --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
-<%= provisioner.dns_forwarders.map { |f| "  #{parameter}-dns-forwarders=#{f} \\" }.join("\n") %>
+<%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
 <% if defined? Katello %>
   --foreman-proxy-parent-fqdn=<%= Setting[:foreman_url] %> \
   --foreman-proxy-foreman-oauth-key=<%= Setting[:oauth_consumer_key] %> \
