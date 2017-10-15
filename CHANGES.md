@@ -1,5 +1,9 @@
 # Changelog
 
+## v5.0.1
+* use case-insensitive OS family comparisons
+* change Katello installer commands
+
 ## v5.0.0
 * fix Foreman 1.13 compatibility with parameter filtering
 
