@@ -104,7 +104,7 @@ module ForemanSetup
     end
 
     def step4_update
-      medium_id = params['foreman_setup_provisioner']['hostgroup_attributes']['medium_id']
+      medium_id = params['foreman_setup_provisioner']['hostgroup_attributes'].try(:[], 'medium_id')
       if medium_id.to_i > 0
         @medium = Medium.find(medium_id) || raise('unable to find medium')
       else
