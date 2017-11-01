@@ -7,7 +7,7 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
   end
 
   test '#index with provisioner' do
-    FactoryGirl.create :setup_provisioner
+    FactoryBot.create :setup_provisioner
     get :index, {}, set_session_user
     assert_response :success
     assert_template 'foreman_setup/provisioners/index'
@@ -15,9 +15,9 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
 
   context 'pre-creation' do
     setup do
-      @host = FactoryGirl.create(:host, :domain => FactoryGirl.create(:domain))
+      @host = FactoryBot.create(:host, :domain => FactoryBot.create(:domain))
       Facter.expects(:value).with(:fqdn).returns(@host.name).at_least_once
-      @proxy = FactoryGirl.create(:smart_proxy, :url => "https://#{@host.name}:8443")
+      @proxy = FactoryBot.create(:smart_proxy, :url => "https://#{@host.name}:8443")
     end
 
     test '#new' do
@@ -51,7 +51,7 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
   end
 
   test '#step2 with new subnet' do
-    prov = FactoryGirl.create(:setup_provisioner, :step1)
+    prov = FactoryBot.create(:setup_provisioner, :step1)
     get :step2, {:id => prov.id}, set_session_user
     assert_response :success
     assert_template 'foreman_setup/provisioners/_step2'
@@ -65,7 +65,7 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
   end
 
   test '#step2_update' do
-    prov = FactoryGirl.create(:setup_provisioner, :step1)
+    prov = FactoryBot.create(:setup_provisioner, :step1)
     Facter.expects(:value).with(:fqdn).returns(prov.host.name).at_least_once
 
     put :step2_update, {:id => prov.id, 'foreman_setup_provisioner' => {:subnet_attributes => {'name' => 'test', :network => '192.168.1.0', :mask => '255.255.255.0'}, :domain_name => prov.host.domain.name}}, set_session_user
@@ -93,14 +93,14 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
   end
 
   test '#step3' do
-    prov = FactoryGirl.create(:setup_provisioner, :step2)
+    prov = FactoryBot.create(:setup_provisioner, :step2)
     get :step3, {:id => prov.id}, set_session_user
     assert_response :success
     assert_template 'foreman_setup/provisioners/_step3'
   end
 
   test '#step4' do
-    prov = FactoryGirl.create(:setup_provisioner, :step2)
+    prov = FactoryBot.create(:setup_provisioner, :step2)
 
     SmartProxy.any_instance.expects(:refresh)
     prov.smart_proxy.features = Feature.where(:name => ['DNS', 'DHCP', 'TFTP'])
@@ -125,7 +125,7 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
   end
 
   test '#step4_update' do
-    prov = FactoryGirl.create(:setup_provisioner, :step2)
+    prov = FactoryBot.create(:setup_provisioner, :step2)
 
     attrs = {
       :hostgroup_attributes => {},
@@ -148,7 +148,7 @@ class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
   end
 
   test '#step5' do
-    prov = FactoryGirl.create(:setup_provisioner, :step2)
+    prov = FactoryBot.create(:setup_provisioner, :step2)
     get :step5, {:id => prov.id}, set_session_user
     assert_response :success
     assert_template 'foreman_setup/provisioners/_step5'
