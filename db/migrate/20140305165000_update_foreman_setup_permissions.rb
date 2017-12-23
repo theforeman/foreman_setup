@@ -1,4 +1,4 @@
-class UpdateForemanSetupPermissions < ActiveRecord::Migration
+class UpdateForemanSetupPermissions < ActiveRecord::Migration[4.2]
   def self.up
     old_permission = ::Permission.where(:name => "edit_provisioning", :resource_type => nil).first
     new_permission = ::Permission.where(:name => "edit_provisioning", :resource_type => "ForemanSetup::Provisioner").first

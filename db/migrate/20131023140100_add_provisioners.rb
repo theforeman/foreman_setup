@@ -1,4 +1,4 @@
-class AddProvisioners < ActiveRecord::Migration
+class AddProvisioners < ActiveRecord::Migration[4.2]
   def change
     create_table :setup_provisioners do |t|
       t.integer :host_id
