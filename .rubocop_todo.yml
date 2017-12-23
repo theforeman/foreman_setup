@@ -153,13 +153,6 @@ Rails/Date:
 Rails/DynamicFindBy:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: Include.
-# Include: spec/**/*, test/**/*
-Rails/HttpPositionalArguments:
-  Enabled: false
-
 # Offense count: 3
 # Configuration parameters: Include.
 # Include: app/models/**/*.rb
