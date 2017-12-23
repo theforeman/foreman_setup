@@ -1,7 +1,7 @@
 require 'ipaddr'
 
 module ForemanSetup
-  class Provisioner < ActiveRecord::Base
+  class Provisioner < ApplicationRecord
     include ::Authorizable
     include ::Host::Hostmix
 
