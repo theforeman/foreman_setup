@@ -7,8 +7,8 @@ module ForemanSetup
     include Foreman::Controller::Parameters::Subnet
     include Foreman::Renderer
 
-    before_filter :find_myself, :only => [:new, :create]
-    before_filter :find_resource, :except => [:index, :new, :create]
+    before_action :find_myself, :only => [:new, :create]
+    before_action :find_resource, :except => [:index, :new, :create]
 
     def index
       @provisioners = Provisioner.all.paginate :page => params[:page]
