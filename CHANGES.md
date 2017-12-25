@@ -1,5 +1,8 @@
 # Changelog
 
+## v6.0.0
+* fix Foreman 1.17 compatibility with Rails 5
+
 ## v5.0.1
 * use case-insensitive OS family comparisons
 * change Katello installer commands
