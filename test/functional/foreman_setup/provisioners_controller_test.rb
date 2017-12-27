@@ -2,7 +2,7 @@ require 'test_plugin_helper'
 
 class ForemanSetup::ProvisionersControllerTest < ActionController::TestCase
   test '#index without provisioner' do
-    get :index, headers: set_session_user
+    get :index, session: set_session_user
     assert_redirected_to new_foreman_setup_provisioner_path
   end
 
