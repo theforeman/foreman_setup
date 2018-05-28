@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.summary = "Helps set up Foreman for provisioning"
   s.description = "Plugin for Foreman that helps set up provisioning."
-  s.homepage = "http://github.com/theforeman/foreman_setup"
+  s.homepage = "https://github.com/theforeman/foreman_setup"
   s.licenses = ["GPL-3"]
   s.require_paths = ["lib"]
 
