@@ -96,7 +96,7 @@ module ForemanSetup
       url.save!
 
       # Build default PXE menu
-      status, msg = ProvisioningTemplate.build_pxe_default(self)
+      status, msg = ProvisioningTemplate.build_pxe_default
       warning msg unless status == 200
 
       @provisioner.hostgroup.medium ||= @provisioner.host.os.media.first
