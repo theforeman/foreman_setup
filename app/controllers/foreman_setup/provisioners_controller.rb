@@ -135,6 +135,7 @@ module ForemanSetup
 
       {'provision' => provision_tmpl_name, 'PXELinux' => tmpl_name, 'iPXE' => ipxe_tmpl_name, 'finish' => finish_tmpl_name}.each do |kind_name, tmpl_name|
         next if tmpl_name.blank?
+
         kind = TemplateKind.find_by_name(kind_name)
         tmpls = ProvisioningTemplate.where('name LIKE ?', "#{tmpl_name}%").where(:template_kind_id => kind.id)
         tmpls.any? || raise("cannot find template for #{@provisioner.host.os}")
