@@ -65,6 +65,7 @@ module ForemanSetup
     # Ensures our nested hostgroup has as much data as possible
     def populate_hostgroup
       return unless hostgroup.present?
+
       hostgroup.architecture_id ||= architecture.id
       hostgroup.domain_id ||= domain.id
       hostgroup.operatingsystem_id ||= operatingsystem.id
