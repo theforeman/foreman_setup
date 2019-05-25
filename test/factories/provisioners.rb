@@ -7,7 +7,7 @@ FactoryBot.define do
 
     # After step1, interface selection
     trait :step1 do
-      provision_interface 'eth0'
+      provision_interface { 'eth0' }
       after(:create) do |prov, evaluator|
         fact = FactoryBot.create(:fact_name, :name => "ipaddress_#{prov.provision_interface}")
         FactoryBot.create(:fact_value, :fact_name => fact, :host => prov.host, :value => '192.168.1.20')
