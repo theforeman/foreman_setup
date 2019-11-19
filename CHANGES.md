@@ -1,5 +1,8 @@
 # Changelog
 
+## v7.0.0
+* release for Foreman 1.22 or newer
+
 ## v6.0.0
 * fix Foreman 1.17 compatibility with Rails 5
 
