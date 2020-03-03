@@ -105,7 +105,7 @@ module ForemanSetup
 
     def step4_update
       medium_id = params['foreman_setup_provisioner']['hostgroup_attributes'].try(:[], 'medium_id')
-      if medium_id.to_i > 0
+      if medium_id.to_i.positive?
         @medium = Medium.find(medium_id) || raise('unable to find medium')
       else
         @provisioner.hostgroup.medium_id = nil
@@ -121,7 +121,7 @@ module ForemanSetup
       end
 
       # Associate templates with OS and vice-versa
-      if @provisioner.host.os.family && @provisioner.host.os.family.casecmp('Redhat').zero?
+      if @provisioner.host.os.family&.casecmp('Redhat')&.zero?
         tmpl_name = 'Kickstart'
         provision_tmpl_name = @provisioner.host.os.name.casecmp('Redhat').zero? ? 'Kickstart RHEL' : tmpl_name
         ipxe_tmpl_name = 'Kickstart'
