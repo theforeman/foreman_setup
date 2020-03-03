@@ -26,3 +26,6 @@ Style/HashSyntax:
 Metrics/ClassLength:
   Exclude:
     - 'test/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

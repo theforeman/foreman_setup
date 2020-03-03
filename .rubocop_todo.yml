@@ -45,14 +45,14 @@ Layout/EmptyLinesAroundModuleBody:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, IndentationWidth.
 # SupportedStyles: consistent, special_for_inner_method_call, special_for_inner_method_call_in_parentheses
-Layout/FirstParameterIndentation:
+Layout/IndentFirstArgument:
   Enabled: false
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: IndentationWidth.
 # SupportedStyles: special_inside_parentheses, consistent, align_brackets
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
 
 # Offense count: 1
