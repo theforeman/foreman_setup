@@ -23,9 +23,11 @@ Style/HashSyntax:
     - ruby19
     - hash_rockets
 
-Metrics/ClassLength:
-  Exclude:
-    - 'test/**/*'
+Metrics:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
