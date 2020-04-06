@@ -58,7 +58,7 @@ module ForemanSetup
       @provisioner.domain = Domain.find_by_name(domain_name)
       @provisioner.domain ||= Domain.new(:name => domain_name)
 
-      if @provisioner.update_attributes(provisioner_params)
+      if @provisioner.update(provisioner_params)
         @provisioner.subnet.domains << @provisioner.domain unless @provisioner.subnet.domains.include? @provisioner.domain
         process_success :success_msg => _("Successfully updated subnet %s.") % @provisioner.subnet.name, :success_redirect => step3_foreman_setup_provisioner_path
       else
