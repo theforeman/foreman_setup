@@ -3,14 +3,15 @@
 # This file is distributed under the same license as foreman_setup.
 # 
 # Translators:
-# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2015
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2017
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 3.0.2\n"
+"Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-20 09:25+0100\n"
-"PO-Revision-Date: 2015-12-08 12:35+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
+"PO-Revision-Date: 2017-12-12 12:40+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/foreman/foreman/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgid ""
 "All of the necessary components have been set up for provisioning support.  "
 "You can now provision new hosts by registering them from the Hosts page, "
 "then PXE-boot the server on the subnet set up earlier."
-msgstr "Tots els components necessaris han estat preparats per a la compatibilitat amb l'aprovisionament. Ara podeu aprovisionar els nous amfitrions tot registrant-los a la pàgina «Amfitrions», després arranqueu el servidor per PXE en la subxarxa per configurar-ho més ràpid."
+msgstr "Tots els components necessaris han estat preparats per a la compatibilitat amb l'aprovisionament. Ara podeu aprovisionar els amfitrions nous tot registrant-los a la pàgina «Amfitrions», després arranqueu el servidor per PXE en la subxarxa per configurar-ho més ràpid."
 
 msgid ""
 "All of the necessary network information has been collected, now run the "
@@ -46,10 +47,10 @@ msgid "Compute Resources"
 msgstr "Recursos computacionals"
 
 msgid "Create and provision a new host"
-msgstr "Crea i aprovisiona un nou amfitrió"
+msgstr "Crea i aprovisiona un amfitrió nou"
 
 msgid "Create new installation medium"
-msgstr "Crea un nou mitjà d'instal·lació"
+msgstr "Crea un mitjà d'instal·lació nou"
 
 msgid "Delete %s?"
 msgstr "Voleu suprimir %s?"
@@ -85,7 +86,7 @@ msgid ""
 "If installation media has already been set up, it can be selected below and "
 "the wizard will complete the necessary associations.  Otherwise use the "
 "fields below, or the Installation Media page in Foreman to add new media."
-msgstr "Si s'ha establert el mitjà d'instal·lació, aquest es pot seleccionar a continuació, i l'assistent completarà les associacions necessàries. En cas contrari, utilitzeu els camps de sota, o la pàgina «Mitjà d'instal·lació» a Foreman per afegir nous mitjans."
+msgstr "Si s'ha establert el mitjà d'instal·lació, aquest es pot seleccionar a continuació, i l'assistent completarà les associacions necessàries. En cas contrari, utilitzeu els camps de sota, o la pàgina «Mitjà d'instal·lació» a Foreman per afegir mitjans nous."
 
 msgid "Install provisioning with DHCP"
 msgstr "Instal·la l'aprovisionament amb DHCP"
@@ -109,7 +110,7 @@ msgid "Network selection"
 msgstr "Selecció de la xarxa"
 
 msgid "New Host"
-msgstr "Nou amfitrió"
+msgstr "Amfitrió nou"
 
 msgid "Next"
 msgstr "Següent"
@@ -142,7 +143,7 @@ msgid "Provision from %s"
 msgstr "Aprovisionament des de %s"
 
 msgid "Provisioning Setup"
-msgstr "Configuració d'aprovisionament"
+msgstr "Preparació d'aprovisionament"
 
 msgid "Provisioning host"
 msgstr "Amfitrió d'aprovisionament"
@@ -151,16 +152,16 @@ msgid "Provisioning network"
 msgstr "Xarxa d'aprovisionament"
 
 msgid "Provisioning setup"
-msgstr "Ajust d'aprovisionament"
+msgstr "Preparació d'aprovisionament"
 
 msgid "Provisioning setup complete"
-msgstr "S'ha completat la configuració de l'aprovisionament"
+msgstr "S'ha completat la preparació d'aprovisionament"
 
 msgid "Red Hat Satellite 5 or Spacewalk"
 msgstr "Red Hat Satellite 5 o Spacewalk"
 
 msgid "Return to the main provisioning setup page"
-msgstr "Torna a la pàgina principal de la configuració de l'aprovisionament"
+msgstr "Torna a la pàgina principal de la preparació d'aprovisionament"
 
 msgid "Review and edit the host group set up by the provisioning wizard"
 msgstr "Reviseu i editeu el grup d'amfitrions que s'ha configurat amb l'assistent d'aprovisionament"
