@@ -5,7 +5,7 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 3.0.2\n"
+"Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-20 09:25+0100\n"
 "PO-Revision-Date: 2014-08-20 08:30+0000\n"
@@ -78,7 +78,7 @@ msgid "Host %s has at least one network interface"
 msgstr ""
 
 msgid "Hostname"
-msgstr ""
+msgstr "Nome host"
 
 msgid ""
 "If installation media has already been set up, it can be selected below and "
@@ -111,7 +111,7 @@ msgid "New Host"
 msgstr "Nuovo Host"
 
 msgid "Next"
-msgstr ""
+msgstr "Successivo"
 
 msgid "Next steps"
 msgstr ""

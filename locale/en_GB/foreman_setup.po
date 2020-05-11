@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Andi Chandler <andi@gowling.com>, 2015
-# Dominic Cleal <dominic@cleal.org>, 2014
+# 0868a4d1af5275b3f70b0a6dac4c99a4, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 3.0.2\n"
+"Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-20 09:25+0100\n"
-"PO-Revision-Date: 2015-05-04 01:21+0000\n"
+"PO-Revision-Date: 2017-10-12 21:21+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/foreman/foreman/language/en_GB/)\n"
 "MIME-Version: 1.0\n"

@@ -6,10 +6,10 @@
 # Vladimir Pavlov <v.pavlov@i-teco.ru>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 3.0.2\n"
+"Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-20 09:25+0100\n"
-"PO-Revision-Date: 2015-07-03 10:51+0000\n"
+"PO-Revision-Date: 2017-12-01 20:58+0000\n"
 "Last-Translator: Vladimir Pavlov <v.pavlov@i-teco.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/foreman/foreman/language/ru/)\n"
 "MIME-Version: 1.0\n"
