@@ -8,6 +8,7 @@ Gemfile.lock
 .rbenv*
 .rvmrc*
 .ruby-*
+/foreman_setup*gem
 pkg/
 public/
 tags
