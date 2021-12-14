@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :setup_provisioner, :class => ForemanSetup::Provisioner do
     host do
-      association :host, :with_puppet_orchestration, :domain => FactoryBot.create(:domain)
+      association :host, :managed, :domain => FactoryBot.create(:domain)
     end
     smart_proxy { association :smart_proxy, :url => "https://#{host.name}:8443" }
 
