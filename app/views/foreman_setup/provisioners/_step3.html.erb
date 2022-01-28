@@ -26,7 +26,6 @@ foreman-installer \
   --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
 <%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
 <% if defined? Katello %>
-  --foreman-proxy-content-parent-fqdn=<%= Setting[:foreman_url] %> \
   --foreman-proxy-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
   --foreman-proxy-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
 <% else %>
@@ -50,7 +49,6 @@ foreman-installer \
   --foreman-proxy-dns-reverse=<%= provisioner.rdns_zone %> \
 <%= provisioner.dns_forwarders.map { |f| "  --foreman-proxy-dns-forwarders=#{f} \\" }.join("\n") %>
 <% if defined? Katello %>
-  --foreman-proxy-content-parent-fqdn=<%= Setting[:foreman_url] %> \
   --foreman-proxy-oauth-consumer-key=<%= Setting[:oauth_consumer_key] %> \
   --foreman-proxy-oauth-consumer-secret=<%= Setting[:oauth_consumer_secret] %>
 <% else %>
