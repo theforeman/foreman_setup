@@ -1,5 +1,8 @@
 # Changelog
 
+## v8.0.0
+* release for Foreman 3.2 or newer
+
 ## v7.0.0
 * release for Foreman 1.22 or newer
 
