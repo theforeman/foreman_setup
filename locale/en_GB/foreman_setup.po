@@ -1,7 +1,7 @@
 # foreman_setup
-# 
+#
 # This file is distributed under the same license as foreman_setup.
-# 
+#
 # Translators:
 # Andi Chandler <andi@gowling.com>, 2015
 # 0868a4d1af5275b3f70b0a6dac4c99a4, 2014
@@ -9,10 +9,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 09:25+0100\n"
 "PO-Revision-Date: 2017-10-12 21:21+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
-"Language-Team: English (United Kingdom) (http://www.transifex.com/foreman/foreman/language/en_GB/)\n"
+"Language-Team: English (United Kingdom) (http://www.transifex.com/foreman/fore"
+"man/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,16 +28,10 @@ msgstr "Activation key configuration"
 msgid "Add and manage compute resources (virtualization and cloud)"
 msgstr "Add and manage compute resources (virtualisation and cloud)"
 
-msgid ""
-"All of the necessary components have been set up for provisioning support.  "
-"You can now provision new hosts by registering them from the Hosts page, "
-"then PXE-boot the server on the subnet set up earlier."
+msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
 msgstr "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
 
-msgid ""
-"All of the necessary network information has been collected, now run the "
-"Foreman installer again with the necessary arguments to configure "
-"provisioning."
+msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
 msgstr "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
 
 msgid "Completion"
@@ -82,10 +76,7 @@ msgstr "Host %s has at least one network interface"
 msgid "Hostname"
 msgstr "Hostname"
 
-msgid ""
-"If installation media has already been set up, it can be selected below and "
-"the wizard will complete the necessary associations.  Otherwise use the "
-"fields below, or the Installation Media page in Foreman to add new media."
+msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
 msgstr "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
 
 msgid "Install provisioning with DHCP"
@@ -172,9 +163,7 @@ msgstr "Set up provisioning"
 msgid "Smart proxy"
 msgstr "Smart proxy"
 
-msgid ""
-"Some information about the location of installation media for the operating "
-"system used for provisioning is now required."
+msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
 msgstr "Some information about the location of installation media for the operating system used for provisioning is now required."
 
 msgid "Spacewalk hostname is missing"
@@ -192,24 +181,16 @@ msgstr "Successfully updated subnet %s."
 msgid "The DNS domain name to provision hosts into"
 msgstr "The DNS domain name to provision hosts into"
 
-msgid ""
-"The configuration set up is all accessible under the Infrastructure menu, "
-"e.g. Infrastructure > Subnets, and can be changed in the web interface.  You"
-" can return to this set up process through <b>Infrastructure > Provisioning "
-"Setup</b> to change settings or add new provisioning capabilities."
+msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
 msgstr "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
 
 msgid "The following operating system will be configured for provisioning:"
 msgstr "The following operating system will be configured for provisioning:"
 
-msgid ""
-"This wizard will help set up Foreman for full host provisioning.  Before we "
-"begin, a few requirements will be verified."
+msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
 msgstr "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
 
-msgid ""
-"To provision hosts, some configuration values are needed for the "
-"provisioning subnet attached to the Foreman server."
+msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
 msgstr "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
 
 msgid "Type"
@@ -218,7 +199,5 @@ msgstr "Type"
 msgid "Use an existing installation medium"
 msgstr "Use an existing installation medium"
 
-msgid ""
-"Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an "
-"appropriate activation key below, otherwise leave blank."
+msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
 msgstr "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."

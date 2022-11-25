@@ -1,0 +1,201 @@
+# foreman_setup
+#
+# This file is distributed under the same license as foreman_setup.
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Foreman\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2014-08-20 08:30+0000\n"
+"Last-Translator: Dominic Cleal <dcleal@redhat.com>\n"
+"Language-Team: Georgian (http://www.transifex.com/foreman/foreman/language/ka/"
+")\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ka\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Activation key"
+msgstr "აქტივაციის გასაღები"
+
+msgid "Activation key configuration"
+msgstr "აქტივაციის გასაღების კონფიგურაცია"
+
+msgid "Add and manage compute resources (virtualization and cloud)"
+msgstr "გამოთვლითი რესურსების დამატება და მართვა (ვირტუალიზაცია და ღრუბლოვანი)"
+
+msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
+msgstr "ყველა საჭირო კომპონენტი შეიქმნა მხარდაჭერის უზრუნველსაყოფად. ახლა შეგიძლიათ ახალი ჰოსტების მიწოდება Hosts გვერდიდან დარეგისტრირებით, შემდეგ PXE-ჩატვირთეთ სერვერი ადრე დაყენებულ ქვექსელზე."
+
+msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
+msgstr "ქსელის ყველა საჭირო ინფორმაცია შეგროვდა, ახლა ისევ გაუშვით Foreman ინსტალერი საჭირო არგუმენტებით უზრუნველყოფის კონფიგურაციისთვის."
+
+msgid "Completion"
+msgstr "დასრულება"
+
+msgid "Compute Resources"
+msgstr "გამოთვლითი რესურსები"
+
+msgid "Create and provision a new host"
+msgstr "ახალი ჰოსტის შექმნა და სამუშაოდ მომზადება"
+
+msgid "Create new installation medium"
+msgstr "ახალი დასაყენებელი დისკის შექმნა"
+
+msgid "Delete %s?"
+msgstr "წავშალო \"%s\"?"
+
+msgid "Domain"
+msgstr "დომენი"
+
+msgid "Domain|Name"
+msgstr "დომენი|სახელი"
+
+msgid "Edit Host Group"
+msgstr "ჰოსტების ჯგუფის ჩასწორება"
+
+msgid "Existing medium"
+msgstr "არსებული სივრცე"
+
+msgid "Foreman installer"
+msgstr "Foreman-ის დაყენების პროგრამა"
+
+msgid "Found registered host %s"
+msgstr "ნაპოვნია რეგისტრირებული ჰოსტი: %s"
+
+msgid "Found registered smart proxy %s"
+msgstr "ნაპოვნია რეგისტრირებული ჭკვიანი პროქსი: %s"
+
+msgid "Host %s has at least one network interface"
+msgstr "ჰოსტს (%s) სულ ცოტა ერთი ქსელის ინტერფეისი გააჩნია"
+
+msgid "Hostname"
+msgstr "ჰოსტის სახელი"
+
+msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
+msgstr "თუ საინსტალაციო მედია უკვე დაყენებულია, მისი არჩევა შესაძლებელია ქვემოთ და ოსტატი დაასრულებს აუცილებელ ასოციაციებს. წინააღმდეგ შემთხვევაში გამოიყენეთ ქვემოთ მოცემული ველები ან ინსტალაციის მედია გვერდი Foreman-ში ახალი მედიის დასამატებლად."
+
+msgid "Install provisioning with DHCP"
+msgstr "სამუშაოდ მომზადება DHCP-ით"
+
+msgid "Install provisioning without DHCP"
+msgstr "სამუშაოდ მომზადება DHCP-ის გარეშე"
+
+msgid "Installation media"
+msgstr "დასაყენებელი სივრცე"
+
+msgid "Missing registered host %s, please ensure it is checking in"
+msgstr "აკლია რეგისტრირებული ჰოსტი %s, გთხოვთ, დარწმუნდეთ, რომ ის შემოწმებულია"
+
+msgid "Missing registered smart proxy %s, please ensure it is registered"
+msgstr "აკლია რეგისტრირებული ჭკვიანი პროქსი %s, გთხოვთ, დარწმუნდეთ, რომ ის რეგისტრირებულია"
+
+msgid "Network config"
+msgstr "ქსელის მორგება"
+
+msgid "Network selection"
+msgstr "ქსელის არჩევანი"
+
+msgid "New Host"
+msgstr "ახალი ჰოსტი"
+
+msgid "Next"
+msgstr "შემდეგი"
+
+msgid "Next steps"
+msgstr "შემდეგი ნაბიჯები"
+
+msgid "No network interfaces listed in $interfaces fact"
+msgstr "$interfaces-ის ფაქტში ქსელის ინტერფეისები ნაპოვნი არაა"
+
+msgid "Normal installation media"
+msgstr "ნორმალური დასაყენებელი სივრცე"
+
+msgid "Not available until pre-requisites satisified."
+msgstr "მიუწვდომელია, სანამ არ ყველა მოთხოვნას არ დააკმაყოფილებთ."
+
+msgid "Operating system"
+msgstr "ოპერაციული სისტემა"
+
+msgid "Path or URL"
+msgstr "ბილიკი ან ბმული"
+
+msgid "Plugin for Foreman that helps set up provisioning."
+msgstr "მოდული Foreman-ისთვის, რომელიც გეხმარებათ მანქანების სამუშაოდ მომზადებაში."
+
+msgid "Pre-requisites"
+msgstr "წინასწარი მოთხოვნები"
+
+msgid "Provision from %s"
+msgstr "მუშაობისთვის მომზადება %s-დან"
+
+msgid "Provisioning Setup"
+msgstr "მუშაობისთვის მომზადების მორგება"
+
+msgid "Provisioning host"
+msgstr "მუშაობისთვის მომზადების ჰოსტი"
+
+msgid "Provisioning network"
+msgstr "მუშაობისთვის მომზადების ქსელი"
+
+msgid "Provisioning setup"
+msgstr "მუშაობისთვის მომზადების მორგება"
+
+msgid "Provisioning setup complete"
+msgstr "მუშაობისთვის მომზადების მორგება დასრულებულია"
+
+msgid "Red Hat Satellite 5 or Spacewalk"
+msgstr "Red Hat Satellite 5 ან Spacewalk"
+
+msgid "Return to the main provisioning setup page"
+msgstr "სამუშაოდ მომზადების მორგების მთავარ გვერდზე დაბრუნება"
+
+msgid "Review and edit the host group set up by the provisioning wizard"
+msgstr "გადახედეთ და ჩაასწორეთ სამუშაოდ მომმზადებლის მიერ აწყობილი ჰოსტების ჯგუფი"
+
+msgid "Set up provisioning"
+msgstr "მუშაობისთვის მომზადების მორგება"
+
+msgid "Smart proxy"
+msgstr "ჭკვიანი პროქსი"
+
+msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
+msgstr "საჭიროა გარკვეული ინფორმაცია მუშაობის მომზადებისას გამოყენებული ოპერაციული სისტემის დასაყენებელი დისკის შესახებ."
+
+msgid "Spacewalk hostname is missing"
+msgstr "Spacewalk-ის ჰოსტის სახელი მითითებული არაა"
+
+msgid "Subnet"
+msgstr "ქვექსელი"
+
+msgid "Successfully associated OS %s."
+msgstr "ოს-ი %s წარმატებით იქნა ასოცირებული."
+
+msgid "Successfully updated subnet %s."
+msgstr "ქვექსელი წარმატებით განახლდა: %s."
+
+msgid "The DNS domain name to provision hosts into"
+msgstr "DNS დომენური სახელი ჰოსტების სამუშაოდ მომზადებისთვის"
+
+msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
+msgstr "კონფიგურაციის დაყენება ხელმისაწვდომია ინფრასტრუქტურის მენიუდან, მაგ. ინფრასტრუქტურა > ქვექსელები და შეიძლება შეიცვალოს ვებ ინტერფეისით. თქვენ შეგიძლიათ დაუბრუნდეთ ამ დაყენების პროცესს <b>ინფრასტრუქტურა > სამუშაოდ მომზადების მორგება</b> მეშვეობით, რათა შეცვალოთ პარამეტრები ან დაამატოთ ახალი შესაძლებლობები."
+
+msgid "The following operating system will be configured for provisioning:"
+msgstr "ოპერაციული სისტემა, რომელიც მორგებული იქნება სამუშაოდ მომზადებისთვის:"
+
+msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
+msgstr "ვიზარდი ჰოსტების სამუშაოდ სრულად მოსამზადებლად Foreman-ის მორგებაში დაგეხმარებათ.  სანამ დავიწყებთ, რამდენიმე მოთხოვნის დაკმაყოფილებაა საჭირო."
+
+msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
+msgstr "ჰოსტების სამუშაოდ მოსამზადებლად Foreman-ის სერვერზე მიმაგრებული მომზადების ქვექსელის ზოგიერთი პარამეტრის მნიშვნელობაა საჭირო."
+
+msgid "Type"
+msgstr "ტიპი"
+
+msgid "Use an existing installation medium"
+msgstr "დაყენების უკვე არსებული დისკის გამოყენება"
+
+msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
+msgstr "Spacewalk-ის, Red Hat Network-ის ან Red Hat Satellite 5-ის მომხმარებლებმა უნდა შეიყვანონ შესაბამისი აქტივაციის გასაღები ქვემოთ, წინააღმდეგ შემთხვევაში დატოვეთ ცარიელი."
