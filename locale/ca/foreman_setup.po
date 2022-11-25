@@ -1,7 +1,7 @@
 # foreman_setup
-# 
+#
 # This file is distributed under the same license as foreman_setup.
-# 
+#
 # Translators:
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2017
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015
@@ -9,10 +9,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 09:25+0100\n"
 "PO-Revision-Date: 2017-12-12 12:40+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
-"Language-Team: Catalan (http://www.transifex.com/foreman/foreman/language/ca/)\n"
+"Language-Team: Catalan (http://www.transifex.com/foreman/foreman/language/ca/)"
+"\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,16 +28,10 @@ msgstr "Configuració de la clau d'activació"
 msgid "Add and manage compute resources (virtualization and cloud)"
 msgstr "Afegeix i configurar els recursos computacionals (virtualització i núvol)"
 
-msgid ""
-"All of the necessary components have been set up for provisioning support.  "
-"You can now provision new hosts by registering them from the Hosts page, "
-"then PXE-boot the server on the subnet set up earlier."
+msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
 msgstr "Tots els components necessaris han estat preparats per a la compatibilitat amb l'aprovisionament. Ara podeu aprovisionar els amfitrions nous tot registrant-los a la pàgina «Amfitrions», després arranqueu el servidor per PXE en la subxarxa per configurar-ho més ràpid."
 
-msgid ""
-"All of the necessary network information has been collected, now run the "
-"Foreman installer again with the necessary arguments to configure "
-"provisioning."
+msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
 msgstr "Tota la informació de xarxa necessària ha estat recopilada, ara torneu a executar l'instal·lador de Foreman amb els arguments necessaris per a configurar l'aprovisionament."
 
 msgid "Completion"
@@ -82,10 +76,7 @@ msgstr "L'amfitrió %s com a mínim té una interfície de xarxa"
 msgid "Hostname"
 msgstr "Nom d'amfitrió"
 
-msgid ""
-"If installation media has already been set up, it can be selected below and "
-"the wizard will complete the necessary associations.  Otherwise use the "
-"fields below, or the Installation Media page in Foreman to add new media."
+msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
 msgstr "Si s'ha establert el mitjà d'instal·lació, aquest es pot seleccionar a continuació, i l'assistent completarà les associacions necessàries. En cas contrari, utilitzeu els camps de sota, o la pàgina «Mitjà d'instal·lació» a Foreman per afegir mitjans nous."
 
 msgid "Install provisioning with DHCP"
@@ -172,9 +163,7 @@ msgstr "Configura l'aprovisionament"
 msgid "Smart proxy"
 msgstr "Servidor intermediari intel·ligent"
 
-msgid ""
-"Some information about the location of installation media for the operating "
-"system used for provisioning is now required."
+msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
 msgstr "Ara es requereix una part de la informació sobre la ubicació dels mitjans d'instal·lació per al sistema operatiu que s'utilitza per a l'aprovisionament."
 
 msgid "Spacewalk hostname is missing"
@@ -192,24 +181,16 @@ msgstr "S'ha actualitzat correctament la subxarxa %s."
 msgid "The DNS domain name to provision hosts into"
 msgstr "El nom de domini DNS per aprovisionar-hi els amfitrions"
 
-msgid ""
-"The configuration set up is all accessible under the Infrastructure menu, "
-"e.g. Infrastructure > Subnets, and can be changed in the web interface.  You"
-" can return to this set up process through <b>Infrastructure > Provisioning "
-"Setup</b> to change settings or add new provisioning capabilities."
+msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
 msgstr "La configuració preparada està accessible sota el menú d'Infraestructura, és a dir, Infraestructura > Subxarxes, i es pot canviar en la interfície web. Podeu tornar a aquest procés de configuració a través d'<b>Infraestructura > Configuració d'aprovisionament</b>, per canviar la configuració o per afegir-hi noves capacitats d'aprovisionament."
 
 msgid "The following operating system will be configured for provisioning:"
 msgstr "El següent sistema operatiu serà configurat per a l'aprovisionament:"
 
-msgid ""
-"This wizard will help set up Foreman for full host provisioning.  Before we "
-"begin, a few requirements will be verified."
+msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
 msgstr "Aquest assistent us ajudarà a configurar Foreman per a l'aprovisionament complet dels amfitrions. Abans de començar, es verificaran alguns requisits."
 
-msgid ""
-"To provision hosts, some configuration values are needed for the "
-"provisioning subnet attached to the Foreman server."
+msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
 msgstr "Per aprovisionar els amfitrions, es requereix una part dels valors de la configuració, per a l'aprovisionament de la subxarxa adjuntada al servidor de Foreman."
 
 msgid "Type"
@@ -218,7 +199,5 @@ msgstr "Tipus"
 msgid "Use an existing installation medium"
 msgstr "Utilitza un mitjà existent d'instal·lació"
 
-msgid ""
-"Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an "
-"appropriate activation key below, otherwise leave blank."
+msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
 msgstr "Els usuaris de Spacewalk, Red Hat Network o Red Hat Satellite 5, han d'introduir una clau d'activació apropiada a continuació, en cas contrari deixeu-ho en blanc."

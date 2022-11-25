@@ -1,22 +1,24 @@
 # foreman_setup
-# 
+#
 # This file is distributed under the same license as foreman_setup.
-# 
+#
 # Translators:
 # Vladimir Pavlov <v.pavlov@i-teco.ru>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 09:25+0100\n"
 "PO-Revision-Date: 2017-12-01 20:58+0000\n"
 "Last-Translator: Vladimir Pavlov <v.pavlov@i-teco.ru>\n"
-"Language-Team: Russian (http://www.transifex.com/foreman/foreman/language/ru/)\n"
+"Language-Team: Russian (http://www.transifex.com/foreman/foreman/language/ru/)"
+"\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=1"
+"1 && n%100<=14)? 2 : 3);\n"
 
 msgid "Activation key"
 msgstr "Ключ активации"
@@ -27,16 +29,10 @@ msgstr "Настройки ключа активации"
 msgid "Add and manage compute resources (virtualization and cloud)"
 msgstr "Просмотр и управление вычислительными ресурсами (виртуализация и облака)"
 
-msgid ""
-"All of the necessary components have been set up for provisioning support.  "
-"You can now provision new hosts by registering them from the Hosts page, "
-"then PXE-boot the server on the subnet set up earlier."
+msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
 msgstr "Вы необходимые компоненты были установлены для поддержки подготовки. Теперь Вы можете подготавливать новые узлы, регистрируя их на странице Узлы, затем просто загрузите сервер по сети, в подсети настроенной ранее."
 
-msgid ""
-"All of the necessary network information has been collected, now run the "
-"Foreman installer again with the necessary arguments to configure "
-"provisioning."
+msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
 msgstr "Вся необходимая информация о сети была собрана, запустите установку Foreman еще раз, с параметрами для настройки подготовки."
 
 msgid "Completion"
@@ -81,10 +77,7 @@ msgstr "Узел %s имеет как минимум один сетевой и�
 msgid "Hostname"
 msgstr "Имя узла"
 
-msgid ""
-"If installation media has already been set up, it can be selected below and "
-"the wizard will complete the necessary associations.  Otherwise use the "
-"fields below, or the Installation Media page in Foreman to add new media."
+msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
 msgstr "Если установочный носитель уже был установлен, он может быть выбран ниже и мастер добавить необходимые связи. Иначе, используйте поля ниже или страницу Установочный носитель в Foreman, для добавления нового носителя."
 
 msgid "Install provisioning with DHCP"
@@ -171,9 +164,7 @@ msgstr "Установка подготовки"
 msgid "Smart proxy"
 msgstr "Смарт-прокси"
 
-msgid ""
-"Some information about the location of installation media for the operating "
-"system used for provisioning is now required."
+msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
 msgstr "Теперь требуется некоторая информация о местоположении установочного носителя для операционной системы для подготовки."
 
 msgid "Spacewalk hostname is missing"
@@ -191,24 +182,16 @@ msgstr "Подсеть %S успешно обновлена."
 msgid "The DNS domain name to provision hosts into"
 msgstr "Имя домена DNS для подготовки узлов в"
 
-msgid ""
-"The configuration set up is all accessible under the Infrastructure menu, "
-"e.g. Infrastructure > Subnets, and can be changed in the web interface.  You"
-" can return to this set up process through <b>Infrastructure > Provisioning "
-"Setup</b> to change settings or add new provisioning capabilities."
+msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
 msgstr "Конфигурация установки доступна в меню Инфраструктура, т.е. Инфраструктура > Подсети, и может быть изменена из веб-интерфейса. Вы можете вернуться к этому установочному процессу через <b>Infrastructure > Provisioning Setup</b> для изменения настроек или добавления новых возможностей подготовки."
 
 msgid "The following operating system will be configured for provisioning:"
 msgstr "Следующие операционные системы были настроены для подготовки:"
 
-msgid ""
-"This wizard will help set up Foreman for full host provisioning.  Before we "
-"begin, a few requirements will be verified."
+msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
 msgstr "Этот мастер поможет Вам установить Foreman для полной подготовки узлов. Перед началом будут проверены некоторые требования."
 
-msgid ""
-"To provision hosts, some configuration values are needed for the "
-"provisioning subnet attached to the Foreman server."
+msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
 msgstr "Для подготовки узлов требуются некоторые настраиваемые значения для подсети подготовки, подключенной к Foreman."
 
 msgid "Type"
@@ -217,7 +200,5 @@ msgstr "Тип"
 msgid "Use an existing installation medium"
 msgstr "Использовать существующий установочный носитель"
 
-msgid ""
-"Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an "
-"appropriate activation key below, otherwise leave blank."
+msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
 msgstr "Пользователи  Spacewalk, Red Hat Network или Red Hat Satellite 5 должны ввести подтвержденный ключ активации ниже, иначе оставьте пустым."

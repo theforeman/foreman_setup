@@ -1,17 +1,17 @@
 # foreman_setup
-# 
+#
 # This file is distributed under the same license as foreman_setup.
-# 
+#
 # Translators:
 # 山田 修司 🍣 Shuji Yamada <uzy.exe@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 09:25+0100\n"
 "PO-Revision-Date: 2018-03-27 14:09+0000\n"
 "Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>\n"
-"Language-Team: Japanese (http://www.transifex.com/foreman/foreman/language/ja/)\n"
+"Language-Team: Japanese (http://www.transifex.com/foreman/foreman/language/ja/"
+")\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,16 +27,10 @@ msgstr "アクティベーションキーの設定"
 msgid "Add and manage compute resources (virtualization and cloud)"
 msgstr "コンピューティングリソースの追加と管理 (仮想化およびクラウド)"
 
-msgid ""
-"All of the necessary components have been set up for provisioning support.  "
-"You can now provision new hosts by registering them from the Hosts page, "
-"then PXE-boot the server on the subnet set up earlier."
+msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
 msgstr ""
 
-msgid ""
-"All of the necessary network information has been collected, now run the "
-"Foreman installer again with the necessary arguments to configure "
-"provisioning."
+msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
 msgstr "必要なネットワーク情報のすべてが収集されました。プロビジョニングを構成するために必要な引数を指定して再びフォアマンインストーラを今すぐ実行します。"
 
 msgid "Completion"
@@ -81,10 +75,7 @@ msgstr "ホスト %s は、少なくとも1つのネットワークインタフ�
 msgid "Hostname"
 msgstr "ホスト名"
 
-msgid ""
-"If installation media has already been set up, it can be selected below and "
-"the wizard will complete the necessary associations.  Otherwise use the "
-"fields below, or the Installation Media page in Foreman to add new media."
+msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
 msgstr "インストールメディアがすでに設定されている場合は以下で選択することができ、ウィザードは必要な関連付けを完了します。それ以外の場合は新しいメディアを追加するには Foreman に以下のフィールド、またはインストールメディアページを使用します。"
 
 msgid "Install provisioning with DHCP"
@@ -171,9 +162,7 @@ msgstr "プロビジョニングのセットアップ"
 msgid "Smart proxy"
 msgstr "スマートプロキシ"
 
-msgid ""
-"Some information about the location of installation media for the operating "
-"system used for provisioning is now required."
+msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
 msgstr ""
 
 msgid "Spacewalk hostname is missing"
@@ -191,24 +180,16 @@ msgstr "サブネットの更新に成功 %s."
 msgid "The DNS domain name to provision hosts into"
 msgstr ""
 
-msgid ""
-"The configuration set up is all accessible under the Infrastructure menu, "
-"e.g. Infrastructure > Subnets, and can be changed in the web interface.  You"
-" can return to this set up process through <b>Infrastructure > Provisioning "
-"Setup</b> to change settings or add new provisioning capabilities."
+msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
 msgstr ""
 
 msgid "The following operating system will be configured for provisioning:"
 msgstr "次のオペレーティングシステムはプロビジョニング用に構成されます: "
 
-msgid ""
-"This wizard will help set up Foreman for full host provisioning.  Before we "
-"begin, a few requirements will be verified."
+msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
 msgstr "このウィザードは、ホストプロビジョニングのために foreman を設定するのに役立ちます。事前にいくつかの要件が検証されます。"
 
-msgid ""
-"To provision hosts, some configuration values are needed for the "
-"provisioning subnet attached to the Foreman server."
+msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
 msgstr "プロビジョニングするホストに、いくつかの設定値が Foreman のサーバーに接続されているプロビジョニングサブネットのために必要とされます。"
 
 msgid "Type"
@@ -217,7 +198,5 @@ msgstr "タイプ"
 msgid "Use an existing installation medium"
 msgstr "既存のインストールメディアを使用します"
 
-msgid ""
-"Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an "
-"appropriate activation key below, otherwise leave blank."
+msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
 msgstr "Spacewalk、Red Hat Network、またはRed Hat Satelite 5のユーザーは適切なアクティベーションキーを入力する必要があります。それら以外の場合はアクティベーションキーの入力を省略できます。"

@@ -1,17 +1,17 @@
 # foreman_setup
-# 
+#
 # This file is distributed under the same license as foreman_setup.
-# 
+#
 # Translators:
 # Sergio Ocón <sergio.ocon@redhat.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: foreman_setup 7.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 09:25+0100\n"
 "PO-Revision-Date: 2018-03-27 13:24+0000\n"
 "Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/foreman/foreman/language/es/)\n"
+"Language-Team: Spanish (http://www.transifex.com/foreman/foreman/language/es/)"
+"\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,16 +27,10 @@ msgstr "Configuración de claves de activación"
 msgid "Add and manage compute resources (virtualization and cloud)"
 msgstr "Añadir y gestionar recursos de cómputo (virtualización y cloud)"
 
-msgid ""
-"All of the necessary components have been set up for provisioning support.  "
-"You can now provision new hosts by registering them from the Hosts page, "
-"then PXE-boot the server on the subnet set up earlier."
+msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
 msgstr "Se han configurado todos los componentes necesarios para el soporte de provisión. Puedes provisionar hosts nuevos registrándolos en la páginas de Hosts, y arrancar con PXE el servidor en la subred anterior."
 
-msgid ""
-"All of the necessary network information has been collected, now run the "
-"Foreman installer again with the necessary arguments to configure "
-"provisioning."
+msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
 msgstr "Se ha recolectado toda la información de red necesaria, ejecute otra vez el instalador de Foreman con los argumentos necesarios para configurar la provisión."
 
 msgid "Completion"
@@ -81,10 +75,7 @@ msgstr "El host %s tiene al menos un interfaz de red"
 msgid "Hostname"
 msgstr "Nombre de host"
 
-msgid ""
-"If installation media has already been set up, it can be selected below and "
-"the wizard will complete the necessary associations.  Otherwise use the "
-"fields below, or the Installation Media page in Foreman to add new media."
+msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
 msgstr "Si ya se ha configurado un medio de instalación, puede seleccionarlo más abajo y el asistente completará las asociaciones necesarias. En otro caso use los campos más abajo, o la página de Medios de Instalación en Foreman para añadir medios nuevos. "
 
 msgid "Install provisioning with DHCP"
@@ -171,9 +162,7 @@ msgstr "Configurar provisión"
 msgid "Smart proxy"
 msgstr "Proxy inteligente"
 
-msgid ""
-"Some information about the location of installation media for the operating "
-"system used for provisioning is now required."
+msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
 msgstr "Se necesita alguna información sobre la ubicación del medio de instalación para el sistema operativo usado para provisionar."
 
 msgid "Spacewalk hostname is missing"
@@ -191,24 +180,16 @@ msgstr "Se actualizó con éxito la subred %s."
 msgid "The DNS domain name to provision hosts into"
 msgstr "Nombre de dominio DNS en el que provisionar los hosts"
 
-msgid ""
-"The configuration set up is all accessible under the Infrastructure menu, "
-"e.g. Infrastructure > Subnets, and can be changed in the web interface.  You"
-" can return to this set up process through <b>Infrastructure > Provisioning "
-"Setup</b> to change settings or add new provisioning capabilities."
+msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
 msgstr "La configuración está disponible en el menú de Infraestructura, p.ej. Infraestructura > Subredes, y puede cambiarse en el interfaz red.  Puede volver a este proceso de configuración a través de <b>Infraestructura > Configuración de Provisión</b> para cambiar configuraciones o añadir nuevas capacidades de provisión."
 
 msgid "The following operating system will be configured for provisioning:"
 msgstr "Se configurará el siguiente sistema operativo para provisión:"
 
-msgid ""
-"This wizard will help set up Foreman for full host provisioning.  Before we "
-"begin, a few requirements will be verified."
+msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
 msgstr "Este asistente ayuda a configurar Foreman para provisionar hosts completos. Antes de empezar, se verificarán unos cuantos requisitos."
 
-msgid ""
-"To provision hosts, some configuration values are needed for the "
-"provisioning subnet attached to the Foreman server."
+msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
 msgstr "Para provisionar hosts, se necesitan algunos valores de configuración para la subred de provisión adjunta al servidor Foreman."
 
 msgid "Type"
@@ -217,7 +198,5 @@ msgstr "Tipo"
 msgid "Use an existing installation medium"
 msgstr "Usar un medio de instalación existente"
 
-msgid ""
-"Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an "
-"appropriate activation key below, otherwise leave blank."
+msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
 msgstr "Usuarios de Spacewal, Red Hat Network, o Red Hat Satellite 5 deben introducir una clave de activación apropiada más abajo. Si no, dejar en blanco."
