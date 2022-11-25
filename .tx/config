@@ -2,7 +2,7 @@
 host = https://www.transifex.com
 
 [foreman.foreman_setup]
-file_filter = locale/<lang>/foreman_setup.po
+file_filter = locale/<lang>/foreman_setup.edit.po
 source_file = locale/foreman_setup.pot
 source_lang = en
 type = PO
