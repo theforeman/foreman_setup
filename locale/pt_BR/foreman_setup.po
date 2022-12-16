@@ -8,17 +8,19 @@
 # Odilon Junior <odilon.junior93@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 7.0.0\n"
+"Project-Id-Version: foreman_setup 8.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-03-18 15:24+0000\n"
-"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>\n"
+"PO-Revision-Date: 2014-08-20 08:30+0000\n"
+"Last-Translator: Luiz Henrique Vasconcelos <luizvasconceloss@yahoo.com.br>, 20"
+"16\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/foreman/foreman/l"
 "anguage/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 100000"
+"0 == 0 ? 1 : 2;\n"
 
 msgid "Activation key"
 msgstr "Chave de ativação"
@@ -42,25 +44,25 @@ msgid "Compute Resources"
 msgstr "Recursos de computação"
 
 msgid "Create and provision a new host"
-msgstr "Criar e provisionar um novo host"
+msgstr "Criar e fornecer um novo anfitrião"
 
 msgid "Create new installation medium"
-msgstr "Criar um nova mídia de instalação"
+msgstr "Criar novo meio de instalação"
 
 msgid "Delete %s?"
-msgstr "Apagar %s"
+msgstr "Excluir %s?"
 
 msgid "Domain"
 msgstr "Domínio"
 
 msgid "Domain|Name"
-msgstr "DNS domain"
+msgstr "Domain|Nome"
 
 msgid "Edit Host Group"
-msgstr "Editar grupo de host"
+msgstr "Edit Host Group"
 
 msgid "Existing medium"
-msgstr "Mídia existente"
+msgstr "Meio existente"
 
 msgid "Foreman installer"
 msgstr ""
@@ -75,7 +77,7 @@ msgid "Host %s has at least one network interface"
 msgstr ""
 
 msgid "Hostname"
-msgstr "Nome de máquina"
+msgstr "Nome da máquina"
 
 msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
 msgstr ""
@@ -87,7 +89,7 @@ msgid "Install provisioning without DHCP"
 msgstr ""
 
 msgid "Installation media"
-msgstr "Meio de instalação"
+msgstr "Mídia de instalação"
 
 msgid "Missing registered host %s, please ensure it is checking in"
 msgstr ""
@@ -99,10 +101,10 @@ msgid "Network config"
 msgstr "Configuração de rede"
 
 msgid "Network selection"
-msgstr "Seleção de rede"
+msgstr "Seleção da rede"
 
 msgid "New Host"
-msgstr "Novo host"
+msgstr "Novo Anfitrião"
 
 msgid "Next"
 msgstr "Próximo"
@@ -111,22 +113,22 @@ msgid "Next steps"
 msgstr "Próximos passos"
 
 msgid "No network interfaces listed in $interfaces fact"
-msgstr "Nenhuma interface de rede listada no fato $interfaces"
+msgstr "Nenhuma interface de rede listada em $interfaces fato"
 
 msgid "Normal installation media"
-msgstr "Mídia de instalação Normal"
+msgstr "Meios normais de instalação"
 
 msgid "Not available until pre-requisites satisified."
-msgstr "Não disponível até os pré-requisitos serem satisfeitos."
+msgstr "Não disponível até que os pré-requisitos sejam satisificados."
 
 msgid "Operating system"
-msgstr "Sistema Operacional"
+msgstr "Sistema operacional"
 
 msgid "Path or URL"
 msgstr "Caminho ou URL"
 
 msgid "Plugin for Foreman that helps set up provisioning."
-msgstr "Plugin do Foreman que ajuda a configurar o provisionamento."
+msgstr "Plugin para Foreman que ajuda a montar o provisionamento."
 
 msgid "Pre-requisites"
 msgstr "Pré-requisitos"
@@ -138,31 +140,31 @@ msgid "Provisioning Setup"
 msgstr "Configuração de Provisionamento"
 
 msgid "Provisioning host"
-msgstr "Provisionamento de hosts"
+msgstr "Anfitrião de provisionamento"
 
 msgid "Provisioning network"
-msgstr "Provisionamento de rede"
+msgstr "Rede de provisionamento"
 
 msgid "Provisioning setup"
-msgstr "Provisionamento de configuração"
+msgstr "Configuração do provisionamento"
 
 msgid "Provisioning setup complete"
-msgstr "Provisionamento de configuração completo"
+msgstr "Configuração do provisionamento completa"
 
 msgid "Red Hat Satellite 5 or Spacewalk"
 msgstr "Red Hat Satellite 5 ou Spacewalk"
 
 msgid "Return to the main provisioning setup page"
-msgstr "Retornar para a tela principal de configuração do provisionamento"
+msgstr "Voltar para a página principal de configuração do provisionamento"
 
 msgid "Review and edit the host group set up by the provisioning wizard"
 msgstr ""
 
 msgid "Set up provisioning"
-msgstr "Configurar o provisionamento"
+msgstr "Estabelecer o provisionamento"
 
 msgid "Smart proxy"
-msgstr "Smart proxy"
+msgstr "Proxy inteligente"
 
 msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
 msgstr ""
@@ -198,7 +200,7 @@ msgid "Type"
 msgstr "Tipo"
 
 msgid "Use an existing installation medium"
-msgstr "Usar uma media de instalação que já existe"
+msgstr "Usar um meio de instalação existente"
 
 msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
-msgstr "Usuários do Spacewalk, Red Hat Network, ou Red Hat Satellite 5 devem entrar com uma chave de ativação apropriada abaixo, ou então deixá-la em branco"
+msgstr "Os usuários do Spacewalk, Red Hat Network ou Red Hat Satellite 5 devem digitar uma chave de ativação apropriada abaixo, caso contrário, deixem em branco."

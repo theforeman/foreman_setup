@@ -6,10 +6,10 @@
 # Xingchao Yu <yuxcer@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 7.0.0\n"
+"Project-Id-Version: foreman_setup 8.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2017-12-01 20:58+0000\n"
-"Last-Translator: Xingchao Yu <yuxcer@gmail.com>\n"
+"PO-Revision-Date: 2014-08-20 08:30+0000\n"
+"Last-Translator: Xingchao Yu <yuxcer@gmail.com>, 2017\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/foreman/foreman/langu"
 "age/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -19,34 +19,34 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Activation key"
-msgstr ""
+msgstr "激活码"
 
 msgid "Activation key configuration"
-msgstr ""
+msgstr "激活码配置"
 
 msgid "Add and manage compute resources (virtualization and cloud)"
-msgstr ""
+msgstr "添加和管理计算资源（虚拟化和云）"
 
 msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
-msgstr ""
+msgstr "所有必要的组件均已设置为置备支持。现在，您可以通过从 Hosts 页注册新主机来调配新主机，然后在前面设置的子网中 PXE 引导服务器。"
 
 msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
-msgstr ""
+msgstr "已收集所有必要的网络信息，现在再次使用必要的参数运行 Foreman 安装程序来配置置备。"
 
 msgid "Completion"
-msgstr ""
+msgstr "完成"
 
 msgid "Compute Resources"
-msgstr "计算机资源"
+msgstr "计算资源"
 
 msgid "Create and provision a new host"
-msgstr ""
+msgstr "创建并置备一个新主机"
 
 msgid "Create new installation medium"
-msgstr ""
+msgstr "创建新安装介质"
 
 msgid "Delete %s?"
-msgstr "删除 %s"
+msgstr "刪除 %s?"
 
 msgid "Domain"
 msgstr "域"
@@ -58,145 +58,145 @@ msgid "Edit Host Group"
 msgstr "编辑主机组"
 
 msgid "Existing medium"
-msgstr ""
+msgstr "现有介质"
 
 msgid "Foreman installer"
-msgstr ""
+msgstr "Foreman 安装程序"
 
 msgid "Found registered host %s"
-msgstr ""
+msgstr "找到注册的主机 %s"
 
 msgid "Found registered smart proxy %s"
-msgstr ""
+msgstr "找到注册的智能代理 %s"
 
 msgid "Host %s has at least one network interface"
-msgstr ""
+msgstr "主机 %s 至少有一个网络接口"
 
 msgid "Hostname"
 msgstr "主机名"
 
 msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
-msgstr ""
+msgstr "如果已经设置了安装介质，则可以在下面选择它，向导将完成所需的关联。如果还没有设置，使用下面的字段或 Foreman 中的安装介质页面来添加新介质。"
 
 msgid "Install provisioning with DHCP"
-msgstr ""
+msgstr "使用 DHCP 进行安装置备"
 
 msgid "Install provisioning without DHCP"
-msgstr ""
+msgstr "不使用 DHCP 进行安装置备"
 
 msgid "Installation media"
-msgstr "安装介质"
+msgstr "安裝媒介"
 
 msgid "Missing registered host %s, please ensure it is checking in"
-msgstr ""
+msgstr "缺少注册主机 %s，请确保正在签入"
 
 msgid "Missing registered smart proxy %s, please ensure it is registered"
-msgstr ""
+msgstr "缺少注册的智能代理 %s，请确保它已注册"
 
 msgid "Network config"
 msgstr "网络配置"
 
 msgid "Network selection"
-msgstr ""
+msgstr "网络选择"
 
 msgid "New Host"
-msgstr "新建主机"
+msgstr "新主机"
 
 msgid "Next"
-msgstr "下一项"
+msgstr "下一个"
 
 msgid "Next steps"
 msgstr "下一步"
 
 msgid "No network interfaces listed in $interfaces fact"
-msgstr ""
+msgstr "$interfaces 事实中没有列出的网络接口"
 
 msgid "Normal installation media"
-msgstr ""
+msgstr "普通安装介质"
 
 msgid "Not available until pre-requisites satisified."
-msgstr ""
+msgstr "在先决条件满足前不可用。"
 
 msgid "Operating system"
 msgstr "操作系统"
 
 msgid "Path or URL"
-msgstr ""
+msgstr "路径或 URL"
 
 msgid "Plugin for Foreman that helps set up provisioning."
-msgstr ""
+msgstr "Foreman 插件帮助设置置备。"
 
 msgid "Pre-requisites"
-msgstr ""
+msgstr "先决条件"
 
 msgid "Provision from %s"
-msgstr ""
+msgstr "从 %s 置备"
 
 msgid "Provisioning Setup"
 msgstr "置备设置"
 
 msgid "Provisioning host"
-msgstr ""
+msgstr "置备主机"
 
 msgid "Provisioning network"
-msgstr ""
+msgstr "置备网络"
 
 msgid "Provisioning setup"
-msgstr ""
+msgstr "置备设置"
 
 msgid "Provisioning setup complete"
-msgstr ""
+msgstr "置备设置完成"
 
 msgid "Red Hat Satellite 5 or Spacewalk"
-msgstr ""
+msgstr "Red Hat Satellite 5 或 Spacewalk"
 
 msgid "Return to the main provisioning setup page"
-msgstr ""
+msgstr "返回到主置备设置页面"
 
 msgid "Review and edit the host group set up by the provisioning wizard"
-msgstr ""
+msgstr "检查并编辑由置备向导设置的主机组"
 
 msgid "Set up provisioning"
-msgstr ""
+msgstr "设置置备"
 
 msgid "Smart proxy"
 msgstr "智能代理"
 
 msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
-msgstr ""
+msgstr "现在，需要提供有关用于置备的操作系统安装介质位置的一些信息。"
 
 msgid "Spacewalk hostname is missing"
-msgstr ""
+msgstr "缺少 spacewalk 主机名"
 
 msgid "Subnet"
 msgstr "子网"
 
 msgid "Successfully associated OS %s."
-msgstr ""
+msgstr "成功关联操作系统 %s。"
 
 msgid "Successfully updated subnet %s."
-msgstr ""
+msgstr "成功更新子网 %s。"
 
 msgid "The DNS domain name to provision hosts into"
-msgstr ""
+msgstr "用于将主机置备到的 DNS 域名"
 
 msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
-msgstr ""
+msgstr "设置的配置都可在 Infrastructure 菜单下访问，如 Infrastructure > Subnets，且可以在 Web 界面中更改。您可以通过 <b>Infrastructure> Provisioning Setup</b> 返回到此设置过程来更改设置或添加新调配功能。"
 
 msgid "The following operating system will be configured for provisioning:"
-msgstr ""
+msgstr "配置以下操作系统用于置备："
 
 msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
-msgstr ""
+msgstr "此向导将协助为完整的主机调配设置 Foreman。开始之前，将验证一些要求。"
 
 msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
-msgstr ""
+msgstr "若要调配主机，需要一些配置值才能使调配子网与 Foreman 服务器连接。"
 
 msgid "Type"
 msgstr "类型"
 
 msgid "Use an existing installation medium"
-msgstr ""
+msgstr "使用现有安装介质"
 
 msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
-msgstr ""
+msgstr "Spacewalk、Red Hat Network 或 Red Hat Satellite 5 的用户应输入下面的相应的激活码，否则留空。"

@@ -4,12 +4,13 @@
 #
 # Translators:
 # 山田 修司 🍣 Shuji Yamada <uzy.exe@gmail.com>, 2015
+# 山田 修司 🍣 Shuji Yamada <uzy.exe@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: foreman_setup 7.0.0\n"
+"Project-Id-Version: foreman_setup 8.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2018-03-27 14:09+0000\n"
-"Last-Translator: Bryan Kearney <bryan.kearney@gmail.com>\n"
+"PO-Revision-Date: 2014-08-20 08:30+0000\n"
+"Last-Translator: 山田 修司 🍣 Shuji Yamada <uzy.exe@gmail.com>, 2015\n"
 "Language-Team: Japanese (http://www.transifex.com/foreman/foreman/language/ja/"
 ")\n"
 "MIME-Version: 1.0\n"
@@ -25,25 +26,25 @@ msgid "Activation key configuration"
 msgstr "アクティベーションキーの設定"
 
 msgid "Add and manage compute resources (virtualization and cloud)"
-msgstr "コンピューティングリソースの追加と管理 (仮想化およびクラウド)"
+msgstr "コンピュートリソースの追加および管理 (ハッシュおよびクラウド)"
 
 msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
-msgstr ""
+msgstr "プロビジョニングサポートに必要なすべてのコンポーネントが設定されました。ホストページから登録して新規ホストのプロビジョニングを行い、以前に設定したサブネットの PXE ブートを行うことができます。"
 
 msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
-msgstr "必要なネットワーク情報のすべてが収集されました。プロビジョニングを構成するために必要な引数を指定して再びフォアマンインストーラを今すぐ実行します。"
+msgstr "必要なネットワーク情報がすべて収集され、プロビジョニング設定に必要な引数を指定して Foreman インストーラーを再実行できるようになりました。"
 
 msgid "Completion"
-msgstr "完成"
+msgstr "完了"
 
 msgid "Compute Resources"
 msgstr "コンピュートリソース"
 
 msgid "Create and provision a new host"
-msgstr "新しいホストを作成してプロビジョニング"
+msgstr "新規ホストの作成とプロビジョニング"
 
 msgid "Create new installation medium"
-msgstr "新しいインストールメディアを作成します"
+msgstr "インストールメディアの新規作成"
 
 msgid "Delete %s?"
 msgstr "%s を削除しますか?"
@@ -58,82 +59,82 @@ msgid "Edit Host Group"
 msgstr "ホストグループの編集"
 
 msgid "Existing medium"
-msgstr "既存メディア"
+msgstr "既存のメディア"
 
 msgid "Foreman installer"
-msgstr "フォアマンインストーラー"
+msgstr "Foreman インストーラー"
 
 msgid "Found registered host %s"
-msgstr "登録されたホストが見つかりました %s"
+msgstr "登録済みのホスト%s が見つかりました"
 
 msgid "Found registered smart proxy %s"
-msgstr "登録されたスマートプロキシが見つかりました %s"
+msgstr "登録済みの Smart Proxy が見つかりました"
 
 msgid "Host %s has at least one network interface"
-msgstr "ホスト %s は、少なくとも1つのネットワークインタフェースを持ちます"
+msgstr "ホスト %s には、少なくとも 1 つのネットワークインターフェースがあります。"
 
 msgid "Hostname"
 msgstr "ホスト名"
 
 msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
-msgstr "インストールメディアがすでに設定されている場合は以下で選択することができ、ウィザードは必要な関連付けを完了します。それ以外の場合は新しいメディアを追加するには Foreman に以下のフィールド、またはインストールメディアページを使用します。"
+msgstr "インストールメディアがすでに設定されている場合は、以下に選択でき、ウィザードが必要な関連付けを完了します。それ以外の場合は、Foreman のフィールドを使用するか、Foreman の インストールメディア ページで新規メディアを追加します。"
 
 msgid "Install provisioning with DHCP"
-msgstr "DHCP を使用してプロビジョニングを構成"
+msgstr "DHCP を使用したプロビジョニングのインストール"
 
 msgid "Install provisioning without DHCP"
-msgstr "DHCP を使用せずにプロビジョニングを構成"
+msgstr "DHCP を使用しないプロビジョニングのインストール"
 
 msgid "Installation media"
 msgstr "インストールメディア"
 
 msgid "Missing registered host %s, please ensure it is checking in"
-msgstr "登録されたホスト %s を見失いました。ホストがチェックインされていることを確認してください"
+msgstr "登録済みホスト %s がありません。チェックインされていることを確認してください。"
 
 msgid "Missing registered smart proxy %s, please ensure it is registered"
-msgstr "登録されたスマートプロキシ %s を見失いました。それが登録されていることを確認してください"
+msgstr "登録済みの Smart Proxy %s がありません。登録されていることを確認してください。"
 
 msgid "Network config"
 msgstr "ネットワーク設定"
 
 msgid "Network selection"
-msgstr "ネットワークの選択"
+msgstr "ネットワーク選択"
 
 msgid "New Host"
 msgstr "新規ホスト"
 
 msgid "Next"
-msgstr "次"
+msgstr "次へ"
 
 msgid "Next steps"
 msgstr "次のステップ"
 
 msgid "No network interfaces listed in $interfaces fact"
-msgstr "ネットワークインタフェースがリストにありません $interfaces fact"
+msgstr "$interfaces ファクトに表示されているネットワークインターフェースがありません"
 
 msgid "Normal installation media"
 msgstr "通常のインストールメディア"
 
 msgid "Not available until pre-requisites satisified."
-msgstr "前提条件を満たすまでは使用できません。"
+msgstr "前提条件が満たされるまでは利用できません。"
 
 msgid "Operating system"
 msgstr "オペレーティングシステム"
 
 msgid "Path or URL"
-msgstr "パス もしくは、 URL"
+msgstr "パスまたは URL"
 
 msgid "Plugin for Foreman that helps set up provisioning."
-msgstr ""
+msgstr "プロビジョニングの設定に使用できる Foreman のプラグイン。"
 
 msgid "Pre-requisites"
 msgstr "前提条件"
 
 msgid "Provision from %s"
-msgstr ""
+msgstr "%s からプロビジョニング"
 
 msgid "Provisioning Setup"
-msgstr "プロビジョニングセットアップ"
+msgstr "プロビジョニング設定"
 
 msgid "Provisioning host"
 msgstr "プロビジョニングホスト"
@@ -142,61 +143,61 @@ msgid "Provisioning network"
 msgstr "プロビジョニングネットワーク"
 
 msgid "Provisioning setup"
-msgstr "プロビジョニングのセットアップ"
+msgstr "プロビジョニング設定"
 
 msgid "Provisioning setup complete"
-msgstr "セットアップのプロビジョニングが完了しました"
+msgstr "プロビジョニング設定の完了"
 
 msgid "Red Hat Satellite 5 or Spacewalk"
-msgstr "Red Hat Satellite 5 もしくは Spacewalk"
+msgstr "Red Hat Satellite 5 または Spacewalk"
 
 msgid "Return to the main provisioning setup page"
-msgstr "メインプロビジョニングのセットアップのページに戻る"
+msgstr "メインのプロビジョニング設定ページに戻ります。"
 
 msgid "Review and edit the host group set up by the provisioning wizard"
-msgstr "プロビジョニングウィザードによってホストグループを確認、編集します"
+msgstr "プロビジョニングウィザードで設定したホストグループの確認および編集"
 
 msgid "Set up provisioning"
-msgstr "プロビジョニングのセットアップ"
+msgstr "プロビジョニングの設定"
 
 msgid "Smart proxy"
-msgstr "スマートプロキシ"
+msgstr "Smart Proxy"
 
 msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
-msgstr ""
+msgstr "プロビジョニングに使用するオペレーティングシステムのインストールメディアの場所に関する情報が必要になりました。"
 
 msgid "Spacewalk hostname is missing"
-msgstr "Spacewalk のホスト名がありません"
+msgstr "spacewalk のホスト名がありません"
 
 msgid "Subnet"
 msgstr "サブネット"
 
 msgid "Successfully associated OS %s."
-msgstr "OSの関連付けに成功 %s."
+msgstr "OS %s が正しく関連付けられました。"
 
 msgid "Successfully updated subnet %s."
-msgstr "サブネットの更新に成功 %s."
+msgstr "サブネット %s を正常に更新しました。"
 
 msgid "The DNS domain name to provision hosts into"
-msgstr ""
+msgstr "ホストをプロビジョニングする DNS ドメイン名"
 
 msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
-msgstr ""
+msgstr "設定オプションはすべてインフラストラクチャーメニュー (インフラストラクチャー > サブネットなど) からアクセスでき、Web インターフェースで変更できます。この設定プロセスには、<b>インフラストラクチャー > プロビジョニング設定</b> を選択して戻り、設定を変更するか、新規のプロビジョニング機能を追加できます。"
 
 msgid "The following operating system will be configured for provisioning:"
-msgstr "次のオペレーティングシステムはプロビジョニング用に構成されます: "
+msgstr "以下のオペレーティングシステムがプロビジョニング用に設定されます。"
 
 msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
-msgstr "このウィザードは、ホストプロビジョニングのために foreman を設定するのに役立ちます。事前にいくつかの要件が検証されます。"
+msgstr "このウィザードは、Foreman での完全なホストプロビジョニングの設定に役立ちます。開始する前に、いくつかの要件が検証されます。"
 
 msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
-msgstr "プロビジョニングするホストに、いくつかの設定値が Foreman のサーバーに接続されているプロビジョニングサブネットのために必要とされます。"
+msgstr "ホストをプロビジョニングするには、Foreman サーバーに接続されているプロビジョニングサブネットに対する設定値が必要になります。"
 
 msgid "Type"
 msgstr "タイプ"
 
 msgid "Use an existing installation medium"
-msgstr "既存のインストールメディアを使用します"
+msgstr "既存のインストールメディアを使用する"
 
 msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
-msgstr "Spacewalk、Red Hat Network、またはRed Hat Satelite 5のユーザーは適切なアクティベーションキーを入力する必要があります。それら以外の場合はアクティベーションキーの入力を省略できます。"
+msgstr "Spacewalk、Red Hat Network、または Red Hat Satellite 5 を使用する場合には、適切なアクティベーションキーを入力する必要があります。それ以外の場合は、空白のままにします。"
