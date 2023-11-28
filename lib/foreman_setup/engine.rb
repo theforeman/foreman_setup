@@ -16,7 +16,8 @@ module ForemanSetup
 
     initializer 'foreman_setup.register_plugin', :before => :finisher_hook do |app|
       Foreman::Plugin.register :foreman_setup do
-        requires_foreman '>= 3.2'
+        requires_foreman '>= 3.7'
+        register_gettext
 
         menu :top_menu, :provisioners, :url_hash => {:controller=> :'foreman_setup/provisioners', :action=>:index},
                  :caption=> N_('Provisioning setup'),
@@ -29,12 +30,6 @@ module ForemanSetup
         end
         role "Provisioning setup", [:edit_provisioning]
       end
-    end
-
-    initializer 'foreman_setup.register_gettext', :after => :load_config_initializers do |app|
-      locale_dir = File.join(File.expand_path('../../..', __FILE__), 'locale')
-      locale_domain = 'foreman_setup'
-      Foreman::Gettext::Support.add_text_domain locale_domain, locale_dir
     end
   end
 
