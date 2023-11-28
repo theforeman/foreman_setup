@@ -1,0 +1,202 @@
+# foreman_setup
+#
+# This file is distributed under the same license as foreman_setup.
+#
+# Translators:
+# Andika Triwidada <andika@gmail.com>, 2023
+msgid ""
+msgstr ""
+"Project-Id-Version: Foreman\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2014-08-20 08:30+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2023\n"
+"Language-Team: Indonesian (http://app.transifex.com/foreman/foreman/language/i"
+"d/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Activation key"
+msgstr "Kunci aktivasi"
+
+msgid "Activation key configuration"
+msgstr "Konfigurasi kunci aktivasi"
+
+msgid "Add and manage compute resources (virtualization and cloud)"
+msgstr "Tambah dan kelola sumber daya komputasi (virtualisasi dan cloud)"
+
+msgid "All of the necessary components have been set up for provisioning support.  You can now provision new hosts by registering them from the Hosts page, then PXE-boot the server on the subnet set up earlier."
+msgstr "Semua komponen yang diperlukan telah disiapkan untuk dukungan provisi. Kini Anda bisa mem-provisi host baru dengan mendaftarkan mereka dari halaman Host, lalu mem-boot PXE server pada subnet yang disiapkan sebelumnya."
+
+msgid "All of the necessary network information has been collected, now run the Foreman installer again with the necessary arguments to configure provisioning."
+msgstr "Semua informasi jaringan yang diperlukan telah dikumpulkan, kini jalankan pemasang Foreman lagi dengan argumen yang diperlukan untuk mengonfigurasi provisi."
+
+msgid "Completion"
+msgstr "Pelengkapan"
+
+msgid "Compute Resources"
+msgstr "Sumber Daya Komputasi"
+
+msgid "Create and provision a new host"
+msgstr "Buat dan provisi suatu host baru"
+
+msgid "Create new installation medium"
+msgstr "Buat medium instalasi baru"
+
+msgid "Delete %s?"
+msgstr "Hapus %s?"
+
+msgid "Domain"
+msgstr "Domain"
+
+msgid "Domain|Name"
+msgstr "Domain|Nama"
+
+msgid "Edit Host Group"
+msgstr "Sunting Grup Host"
+
+msgid "Existing medium"
+msgstr "Medium yang ada"
+
+msgid "Foreman installer"
+msgstr "Pemasang Foreman"
+
+msgid "Found registered host %s"
+msgstr "Ditemukan host yang terdaftar %s"
+
+msgid "Found registered smart proxy %s"
+msgstr "Ditemukan proksi cerdas yang terdaftar %s"
+
+msgid "Host %s has at least one network interface"
+msgstr "Host %spunya setidaknya satu antar muka jaringan"
+
+msgid "Hostname"
+msgstr "Nama host"
+
+msgid "If installation media has already been set up, it can be selected below and the wizard will complete the necessary associations.  Otherwise use the fields below, or the Installation Media page in Foreman to add new media."
+msgstr "Bila media instalasi telah disiapkan, itu dapat dipilih di bawah dan wahana pandu akan melengkapi asosiasi yang diperlukan. Bila tidak, gunakan ruas-ruas di bawah, atau halaman Media Instalasi dalam Foreman untuk menambahkan media baru."
+
+msgid "Install provisioning with DHCP"
+msgstr "Pasang provisi dengan DHCP"
+
+msgid "Install provisioning without DHCP"
+msgstr "Pasang provisi tanpa DHCP"
+
+msgid "Installation media"
+msgstr "Media instalasi"
+
+msgid "Missing registered host %s, please ensure it is checking in"
+msgstr "Kehilangan host yang terdaftar %s, harap pastikan bahwa itu melapor"
+
+msgid "Missing registered smart proxy %s, please ensure it is registered"
+msgstr "Kehilangan proksi cerdas yang terdaftar %s, harap pastikan itu terdaftar"
+
+msgid "Network config"
+msgstr "Konfig jaringan"
+
+msgid "Network selection"
+msgstr "Pemilihan jaringan"
+
+msgid "New Host"
+msgstr "Host Baru"
+
+msgid "Next"
+msgstr "Selanjutnya"
+
+msgid "Next steps"
+msgstr "Langkah selanjutnya"
+
+msgid "No network interfaces listed in $interfaces fact"
+msgstr "Tidak ada antar muka jaringan yang tercantum dalam fakta $interfaces"
+
+msgid "Normal installation media"
+msgstr "Media instalasi normal"
+
+msgid "Not available until pre-requisites satisified."
+msgstr "Tidak tersedia sampai pra-persyaratan terpenuhi."
+
+msgid "Operating system"
+msgstr "Sistem operasi"
+
+msgid "Path or URL"
+msgstr "Path atau URL"
+
+msgid "Plugin for Foreman that helps set up provisioning."
+msgstr "Pengaya bagi Foreman yang membantu menyiapkan provisi."
+
+msgid "Pre-requisites"
+msgstr "Pra persyaratan"
+
+msgid "Provision from %s"
+msgstr "Provisi dari %s"
+
+msgid "Provisioning Setup"
+msgstr "Penyiapan Provisi"
+
+msgid "Provisioning host"
+msgstr "Host provis"
+
+msgid "Provisioning network"
+msgstr "Jaringan provisi"
+
+msgid "Provisioning setup"
+msgstr "Penyiapan provisi"
+
+msgid "Provisioning setup complete"
+msgstr "Penyiapan provisi selesai"
+
+msgid "Red Hat Satellite 5 or Spacewalk"
+msgstr "Red Hat Satellite 5 atau Spacewalk"
+
+msgid "Return to the main provisioning setup page"
+msgstr "Kembali ke halaman penyiapan provisi utama"
+
+msgid "Review and edit the host group set up by the provisioning wizard"
+msgstr "Tinjau dan sunting grup host yang disiapkan oleh wahana pandu provisi"
+
+msgid "Set up provisioning"
+msgstr "Siapkan provisi"
+
+msgid "Smart proxy"
+msgstr "Proksi cerdas"
+
+msgid "Some information about the location of installation media for the operating system used for provisioning is now required."
+msgstr "Sebagian informasi tentang lokasi media instalasi bagi sistem operasi yang dipakai untuk provisi kini diperlukan."
+
+msgid "Spacewalk hostname is missing"
+msgstr "Kurang nama host Spacewalk"
+
+msgid "Subnet"
+msgstr "Subnet"
+
+msgid "Successfully associated OS %s."
+msgstr "Sukses mengasosiasikan OS %s."
+
+msgid "Successfully updated subnet %s."
+msgstr "Sukses memperbarui subnet %s."
+
+msgid "The DNS domain name to provision hosts into"
+msgstr "Nama domain DNS tempat tujuan provisi host"
+
+msgid "The configuration set up is all accessible under the Infrastructure menu, e.g. Infrastructure > Subnets, and can be changed in the web interface.  You can return to this set up process through <b>Infrastructure > Provisioning Setup</b> to change settings or add new provisioning capabilities."
+msgstr "Penyiapan konfigurasi semua dapat diakses di bawah menu Infrastruktur, mis. Infrastruktur > Subnet, dan dapat diubah dalam antar muka web. Anda dapat kembali ke proses penyiapan ini melalui <b>Infrastruktur > Penyiapan Provisi</b> untuk mengubah pengaturan atau menambah kapabilitas provisi baru."
+
+msgid "The following operating system will be configured for provisioning:"
+msgstr "Sistem operasi berikut akan dikonfigurasi untuk provisi:"
+
+msgid "This wizard will help set up Foreman for full host provisioning.  Before we begin, a few requirements will be verified."
+msgstr "Wahana pandu ini akan membantu menyiapkan Foreman untuk provisi host lengkap. Sebelum kami mulai, beberapa persyaratan akan diverifikasi."
+
+msgid "To provision hosts, some configuration values are needed for the provisioning subnet attached to the Foreman server."
+msgstr "Untuk mem-provisi host, beberapa nilai konfigurasi diperlukan untuk provisi subnet yang dicantol ke server Foreman."
+
+msgid "Type"
+msgstr "Tipe"
+
+msgid "Use an existing installation medium"
+msgstr "Gunakan medium instalasi yang ada"
+
+msgid "Users of Spacewalk, Red Hat Network, or Red Hat Satellite 5 should enter an appropriate activation key below, otherwise leave blank."
+msgstr "Pengguna Spacewalk, Red Hat Network, atau Red Hat Satelitte 5 mesti memasukan suatu kunci aktivasi yang sesuai di bawah, bila tidak biarkan kosong."
